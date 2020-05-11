@@ -1,0 +1,155 @@
+.banner {
+  position: relative; }
+
+.gallery__item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 14.285714%;
+  height: 33.333333%;
+  text-align: right; }
+
+.gallery__item img {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  opacity: 0; }
+
+.gallery__item:hover img {
+  opacity: 1; }
+
+.family__section-subtitle {
+  margin: 20px 0; }
+
+.family__section-subtitle + .theme-divider__horizontal-block {
+  margin: 30px 0;
+  height: 4px;
+  max-width: 90px; }
+
+.family-animation__paragraph {
+  margin: 40px 0;
+  max-width: 90%; }
+
+.family-animation__video {
+  position: relative;
+  margin-right: 20px; }
+
+.family-animation__video-player {
+  position: absolute;
+  width: 50px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+
+.family-animation__video-text-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 15px;
+  margin: auto;
+  width: 60%;
+  background-color: #FFFFFF; }
+
+.family-animation__item {
+  position: relative;
+  padding: 15px; }
+
+.family-animation__text-container {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 15px;
+  margin: 15px;
+  width: 70%;
+  background-color: #FFFFFF; }
+
+.family-animation__text {
+  color: #9B9B9B; }
+
+.family-animation__paragraph {
+  margin: 40px 0; }
+
+.family-name__image-container {
+  margin: auto;
+  max-width: 800px; }
+
+.family-name__image-container {
+  position: relative; }
+
+.family-name__item.first {
+  position: absolute;
+  top: 21.3%;
+  left: 28.6%;
+  width: 10%;
+  z-index: 10; }
+
+.family-name__item.second {
+  position: absolute;
+  top: 21.5%;
+  left: 62%;
+  width: 15%; }
+
+.family-name__item.third {
+  position: absolute;
+  top: 33.4%;
+  left: 33.4%;
+  width: 5%; }
+
+.family-name__item.fourth {
+  position: absolute;
+  top: 44%;
+  left: 46.6%;
+  width: 10%; }
+
+.family-name__item.fifth {
+  position: absolute;
+  top: 49.6%;
+  left: 66.8%;
+  width: 5%; }
+
+.family-name__item img {
+  position: relative;
+  z-index: 100; }
+
+.family-name__content {
+  position: absolute;
+  padding: 40px;
+  width: 374px;
+  height: 170px;
+  background-image: url(/images/family-brain-1.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-sizing: border-box;
+  opacity: 0; }
+
+.family-name__content.first {
+  bottom: 61px;
+  left: -85%; }
+
+.family-name__content.second {
+  top: -104%;
+  left: -41%; }
+
+.family-name__content.third {
+  bottom: 52%;
+  left: -226%; }
+
+.family-name__content.fourth {
+  bottom: 66%;
+  left: -90%;
+  background-image: url(/images/family-brain-3.png); }
+
+.family-name__content.fifth {
+  bottom: 70%;
+  left: -222%;
+  background-image: url(/images/family-brain-2.png); }
+
+.family-name__title.green {
+  color: #24CCB8; }
+
+.family-name__content-paragraph {
+  margin-top: 10px; }

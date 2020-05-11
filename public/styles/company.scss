@@ -1,0 +1,206 @@
+@import "site/variables";
+
+.company-section {
+  &__title {
+    padding: 0 50px;
+    line-height: 1.4em;
+  }
+}
+
+.company-team {
+  &__content {
+    padding-left: 30px;
+    max-width: 60%;
+  }
+
+  &__avatar {
+    margin: 40px 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid $theme-color;
+  }
+
+  &__name {
+    padding: 15px 0;
+  }
+
+  &__divider {
+    height: 2px;
+    max-width: 60px;
+    background-color: $gray-5;
+  }
+
+  &__member {
+    opacity: 0.5;
+  
+    transition: opacity 0.4s;
+    -webkit-transition: opacity 0.4s;
+    -ms-transition: opacity 0.4s;
+
+    &.show {
+      opacity: 1;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+}
+
+.company-team-image {
+  position: relative;
+
+  &__item-tag {
+    position: absolute;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  &__item-tag.first {
+    top: 4.3927%;
+    left: 0;
+    width: 15.84%;
+    height: 51.68%;
+  }
+
+  &__item-tag.second {
+    top: 56.59%;
+    left: 0;
+    width: 18%;
+    height: 43.41%;
+  }
+
+  &__item-tag.third {
+    top: 56%;
+    left: 18.5%;
+    width: 16.95%;
+    height: 44%;
+  }
+
+  &__item-tag.fourth {
+    top: 50%;
+    left: 34.9%;
+    width: 16%;
+    height: 49.74%;
+  }
+
+  &__item-tag.fifth {
+    top: 50%;
+    left: 51%;
+    width: 13.5%;
+    height: 49.74%;
+  }
+
+  &__item-tag.sixth {
+    top: 49%;
+    left: 64.5%;
+    width: 13.5%;
+    height: 50.9%;
+  }
+
+  &__item-tag.seventh {
+    top: 7%;
+    right: 7%;
+    width: 15.84%;
+    height: 55%;
+  }
+
+  &__tag {
+    position: absolute;
+    top: 60%;
+    left: 20%;
+    padding: 7px 10px;
+    color: $white;
+    background-color: $tag-color;
+    font-weight: bold;
+    font-style: normal;
+    opacity: 0;
+  
+    transition: opacity 0.4s;
+    -webkit-transition: opacity 0.4s;
+    -ms-transition: opacity 0.4s;
+  }
+
+  &__volume {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+  
+    transition: opacity 0.4s;
+    -webkit-transition: opacity 0.4s;
+    -ms-transition: opacity 0.4s;
+  }
+
+  &__item-tag:hover &__tag,
+  &__item-tag:hover &__volume {
+    opacity: 1;
+  }
+
+  &__tag::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: $tag-color transparent transparent transparent;
+  }
+}
+
+.aikomi-culture {
+  &__paragraph {
+    position: relative;
+    margin: 0 24%;
+  }
+
+  &__mark.first {
+    position: absolute;
+    left: -30px;
+    top: 0;
+  }
+
+  &__mark.second {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__divider {
+    margin: 70px 0;
+    background-color: rgba(151, 151, 151, 0.5);
+  }
+}
+
+.our-partner {
+  &__divider {
+    margin: 20px 0;
+    background-color: rgba(151, 151, 151, 0.5);
+  }
+
+  &__list {
+    margin: 50px 0;
+  }
+
+  &__image {
+    max-height: 36px;
+  }
+}
+
+.about-us {
+  margin-bottom: 100px;
+
+  &__paragraph {
+    margin: 20px 0;
+  }
+
+  &__divider {
+    margin: 50px 0;
+    background-color: rgba(151, 151, 151, 0.5);
+  }
+}

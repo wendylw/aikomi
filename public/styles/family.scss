@@ -1,0 +1,195 @@
+@import "site/variables";
+
+.banner {
+  position: relative;
+}
+
+.gallery {
+  &__item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 14.285714%;
+    height: 33.333333%;
+    text-align: right;
+  }
+
+  &__item img {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    opacity: 0;
+  }
+
+  &__item:hover img {
+    opacity: 1;
+  }
+}
+
+.family {
+  &__section-subtitle {
+    margin: 20px 0;
+  }
+
+  &__section-subtitle + .theme-divider__horizontal-block {
+    margin: 30px 0;
+    height: 4px;
+    max-width: 90px;
+  }
+}
+
+.family-animation {
+  &__paragraph {
+    margin: 40px 0;
+    max-width: 90%;
+  }
+
+  &__video {
+    position: relative;
+    margin-right: 20px;
+  }
+
+  &__video-player {
+    position: absolute;
+    width: 50px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  &__video-text-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 15px;
+    margin: auto;
+    width: 60%;
+    background-color: $white;
+  }
+
+  &__item {
+    position: relative;
+    padding: 15px;
+  }
+
+  &__text-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 15px;
+    margin: 15px;
+    width: 70%;
+    background-color: $white;
+  }
+
+  &__text {
+    color: $gray-2;
+  }
+
+  &__paragraph {
+    margin: 40px 0;
+  }
+}
+
+.family-name {
+  &__image-container {
+    margin: auto;
+    max-width: 800px;
+  }
+
+  &__image-container {
+    position: relative;
+  }
+
+  &__item.first {
+    position: absolute;
+    top: 21.3%;
+    left: 28.6%;
+    width: 10%;
+    z-index: 10;
+  }
+
+  &__item.second {
+    position: absolute;
+    top: 21.5%;
+    left: 62%;
+    width: 15%;
+  }
+
+  &__item.third {
+    position: absolute;
+    top: 33.4%;
+    left: 33.4%;
+    width: 5%;
+  }
+
+  &__item.fourth {
+    position: absolute;
+    top: 44%;
+    left: 46.6%;
+    width: 10%;
+  }
+
+  &__item.fifth {
+    position: absolute;
+    top: 49.6%;
+    left: 66.8%;
+    width: 5%;
+  }
+
+  &__item img {
+    position: relative;
+    z-index: 100;
+  }
+
+  &__content {
+    position: absolute;
+    padding: 40px;
+    width: 374px;
+    height: 170px;
+    background-image: url(/images/family-brain-1.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-sizing: border-box;
+    opacity: 0;
+  }
+
+  &__content.first {
+    bottom: 61px;
+    left: -85%;
+  }
+
+  &__content.second {
+    top: -104%;
+    left: -41%;
+  }
+  
+  &__content.third {
+    bottom: 52%;
+    left: -226%;
+  }
+
+  &__content.fourth {
+    bottom: 66%;
+    left: -90%;
+    background-image: url(/images/family-brain-3.png);
+  }
+
+  &__content.fifth {
+    bottom: 70%;
+    left: -222%;
+    background-image: url(/images/family-brain-2.png);
+  }
+
+  &__title.green {
+    color: #24CCB8;
+  }
+
+  &__content-paragraph {
+    margin-top: 10px;
+  }
+}

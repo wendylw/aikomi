@@ -1,0 +1,80 @@
+@import "site/variables";
+
+.banner {
+  margin-bottom: 70px;
+}
+
+.contact {
+  &__content-container {
+    padding: 40px 0;
+    background-color: $gray-6;
+  }
+
+  &__list,
+  &__media-list {
+    margin: auto;
+    max-width: 350px;
+  }
+
+  &__item {
+    margin: 10px 0;
+  }  
+
+  &__item.address {
+    margin: 30px 0;
+  }
+
+  &__label {
+    display: inline-block;
+    margin-right: 15px;
+    min-width: 55px;
+  }
+
+  &__media-list {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  &__media-item {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  &__link {
+    display: block;
+  }
+
+  &__image {
+    height: 16px;
+  }
+}
+
+.contact-newsletter {
+  margin-bottom: 150px;
+
+  &__description {
+    margin: 30px auto;
+  }  
+}
+
+.contact {
+  &__form {
+    margin: auto;
+    max-width: 800px;
+    font-size: 0;
+  }
+
+  &__input {
+    padding: 12px;
+    font-size: 1.2857rem;
+    width: 620px;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+    background-color: $gray-7;
+  }
+
+  &__button {
+    height: 45px;
+  }
+}

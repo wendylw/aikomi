@@ -1,0 +1,129 @@
+@import "site/variables";
+
+.home-person-care {
+  &__title {
+    margin: 50px auto;
+  }
+
+  &__paragraph {
+    margin: 40px auto 50px;
+  }
+}
+
+.home-dementia {
+  padding: 70px 0;
+
+  &__image {
+    max-width: 380px;
+  }
+
+  &__title {
+    padding: 40px 0;
+  }
+
+  &__paragraph {
+    margin: 50px auto;
+  }
+}
+
+.video,
+.ipad {
+  &__container{
+    position: relative;
+  }
+}
+
+.video {
+  &__container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    height: 70%;
+    background-color: $gray-4;
+  }
+}
+
+.video {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding: 28% 0;
+    background-color: $white;
+    background-image: url(/images/aikomi-home-video.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto;
+  }
+
+  iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &__divider-container {
+    padding: 100px 0 50px;
+    background-color: $gray-4;
+  }
+
+  &__divider {
+    height: 93px;
+  }
+}
+
+.ipad {
+  position: relative;
+
+  svg {
+    width: 40px;
+    height: 40px;
+    fill: $theme-dark-color;
+  }
+
+  &__container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: block;
+    height: 50%;
+    background-color: $gray-4;
+  }
+}
+
+.aikomi-platform {
+  &__paragraphs {
+    margin: 50px auto;
+    max-width: 650px;
+  }
+
+  &__list {
+    margin: auto;
+    max-width: 800px;
+
+    &.second {
+      max-width: 600px;
+    }
+  }
+
+  &__item {
+    padding: 24px;
+    width: 260px;
+  }
+
+  &__image {
+    max-height: 65px;
+  }
+
+  &__text {
+    display: block;
+    margin-top: 10px;
+  }
+}

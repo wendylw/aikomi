@@ -1,0 +1,57 @@
+.banner {
+  margin-bottom: 70px; }
+
+.contact__content-container {
+  padding: 40px 0;
+  background-color: #FBFBFB; }
+
+.contact__list, .contact__media-list {
+  margin: auto;
+  max-width: 350px; }
+
+.contact__item {
+  margin: 10px 0; }
+
+.contact__item.address {
+  margin: 30px 0; }
+
+.contact__label {
+  display: inline-block;
+  margin-right: 15px;
+  min-width: 55px; }
+
+.contact__media-list {
+  margin-top: 50px;
+  margin-bottom: 30px; }
+
+.contact__media-item {
+  display: inline-block;
+  margin-right: 20px; }
+
+.contact__link {
+  display: block; }
+
+.contact__image {
+  height: 16px; }
+
+.contact-newsletter {
+  margin-bottom: 150px; }
+  .contact-newsletter__description {
+    margin: 30px auto; }
+
+.contact__form {
+  margin: auto;
+  max-width: 800px;
+  font-size: 0; }
+
+.contact__input {
+  padding: 12px;
+  font-size: 1.2857rem;
+  width: 620px;
+  border: 0;
+  box-shadow: none;
+  outline: none;
+  background-color: #F7F7F7; }
+
+.contact__button {
+  height: 45px; }

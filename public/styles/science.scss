@@ -1,0 +1,219 @@
+.science-person-center,
+.science-person-center__container {
+  position: relative;
+}
+
+.science-person-center {
+  padding-top: 240px;
+}
+
+.science-person-center::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/images/science-section-1.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+  filter:alpha(opacity = 40);
+  -moz-opacity: 0.4;
+  -khtml-opacity: 0.4;
+  opacity: 0.4;
+}
+
+.science-person-center__cover {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, transparent, white); 
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 100%;
+}
+
+.science-person-center__title{
+  padding: 40px 0;
+}
+
+.science-challenging__subtitle {
+  margin: 50px 0;
+}
+
+.science-person-center__divider {
+  margin: 100px auto;
+  height: 83px;
+}
+
+.science-dementia {
+  margin-top: 40px;
+}
+
+.science-dementia__content {
+  max-width: 520px;
+}
+
+.science-challenging__list {
+  max-width: 70%;
+}
+
+.science-dementia__title {
+  padding: 0 0 50px;
+}
+
+.science-dementia__list {
+  margin: 30px 0;
+}
+
+.science-dementia__item {
+  display: inline-block;
+}
+
+.science-dementia__item-svg {
+  margin: 0 15px;
+  font-size: 0;
+}
+
+.science-dementia__item-svg svg {
+  width: 16px;
+  height: 16px;
+  fill: #EB6666;
+}
+
+.science-dementia__paragraph {
+  margin: 50px 0;
+}
+
+.science-concept__title {
+  margin: 50px 0;
+}
+
+.science-concept__content-container  {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.science-concept__content-container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 15px;
+  top: 0;
+  height: 4px;
+  max-width: 246px;
+  width: 50%;
+  background-color: #F9957F;
+}
+
+.science-concept__content {
+  background-color: #FAFAFA;
+}
+
+.science-introduce__item {
+  margin: 20px auto;
+}
+
+.science-introduce__number {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.science-introduce__paragraph {
+  position: relative;
+  margin: 50px auto;
+}
+
+.science-introduce__mark-start {
+  position: absolute;
+  top: 0;
+  left: 8%;
+  line-height: 1em;
+}
+
+.science-introduce__mark-end {
+  position: absolute;
+  bottom: 0;
+  right: 8%;
+  line-height: 1em;
+}
+
+.science-introduce__text {
+  display: inline;
+}
+
+.science-platform__content-container {
+  position: relative;
+}
+
+.science-platform__content {
+  position: absolute;
+}
+
+.science-platform__content-first {
+  left: 24%;
+  bottom: 20px;
+}
+
+.science-platform__content-second {
+  right: 25%;
+  bottom: 5px;
+}
+
+.science-platform__item {
+  position: absolute;
+  top: 10%;
+  max-width: 150px;
+  /* opacity: 0; */
+}
+
+.science-platform__item-first {
+  left: 11%;
+}
+
+.science-platform__item-second {
+  right: 10%;
+}
+
+.science-platform__item-title {
+  margin: 10px 0;
+}
+
+.science-platform__item-description {
+  position: relative;
+}
+
+.science-platform__item-line {
+  position: absolute;
+  display: inline-block;
+  width: 40px;
+  height: 3px;
+  background-color: #F9957F;
+}
+
+.science-platform__item-line.first {
+  top: 7px;
+  left: 100%;
+  margin-left: 5px;
+}
+
+.science-platform__item-line.second {
+  top: 7px;
+  right: 100%;
+  margin-right: 5px;
+}
+
+.science-platform__title {
+  margin-bottom: 10px;
+}
+
+.science-reference {
+  margin: 50px 0;
+  min-height: 572px;
+  background-color: #FAFAFA;
+}

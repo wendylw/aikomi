@@ -1,0 +1,190 @@
+{{#contentFor "PAGE_LEVEL_STYLES"}}
+<link rel="stylesheet" href="/styles/company.css">
+{{/contentFor}}
+{{#contentFor "PAGE_LEVEL_SCRIPTS"}}
+<script>
+  $(document).ready(function () {
+    $('.company-team-image__item-tag.first').on('mouseenter', function () {
+      $('.our-team .company-team__member').addClass('show');
+    });
+
+    $('.company-team-image__item-tag.first').on('mouseout', function () {
+      $('.our-team .company-team__member').removeClass('show');
+    });
+
+    $('.company-team-image__item-tag.second').on('mouseenter', function () {
+      $('.science-advisors .company-team__member').addClass('show');
+    });
+
+    $('.company-team-image__item-tag.second').on('mouseout', function () {
+      $('.science-advisors .company-team__member').removeClass('show');
+    });
+  });
+</script>
+{{/contentFor}}
+
+{{!< default}}
+<main class="main">
+  <div data-aos="fade-up">
+    <section class="our-team section">
+      <div class="container grid flex-middle">
+        <div class="width-1-2">
+          <h2 class="company-section__title text-size-bigger text-theme-color text-weight-bold">OUR TEAM</h2>
+        </div>
+        <div class="company-team__member width-1-2 flex flex-top">
+          <div class="company-team__avatar flex__shrink-fixed">
+            <img src="/images/company-avatar-1.png" alt="">
+          </div>
+          <div class="company-team__content">
+            <h5 class="text-theme-color">Co-founder & COO</h5>
+            <p class="company-team__name text-weight-bold">​Junichi Kato</p>
+            <i class="company-team__divider divider__horizontal-block"></i>
+            <div>
+              <p class="text-line-height text-weight-light">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div data-aos="fade-up">
+    <section class="">
+      <div class="company-team-image container">
+        <img class="company-team__image" src="/images/company-banner.jpg" alt="">
+        <ul>
+          <li class="company-team-image__item-tag first">
+            <i class="company-team-image__tag">Samik Ghosh</i>
+            <img class="company-team-image__volume" src="/images/volume_up.svg" alt="">
+          </li>
+          <li class="company-team-image__item-tag second">
+            <i class="company-team-image__tag">Samik Ghosh</i>
+            <img class="company-team-image__volume" src="/images/volume_up.svg" alt="">
+          </li>
+          <li class="company-team-image__item-tag third">
+            <i class="company-team-image__tag">Samik Ghosh</i>
+            <img class="company-team-image__volume" src="/images/volume_up.svg" alt="">
+          </li>
+          <li class="company-team-image__item-tag fourth">
+            <i class="company-team-image__tag">Samik Ghosh</i>
+            <img class="company-team-image__volume" src="/images/volume_up.svg" alt="">
+          </li>
+          <li class="company-team-image__item-tag fifth">
+            <i class="company-team-image__tag">Samik Ghosh</i>
+            <img class="company-team-image__volume" src="/images/volume_up.svg" alt="">
+          </li>
+          <li class="company-team-image__item-tag sixth">
+            <i class="company-team-image__tag">Samik Ghosh</i>
+            <img class="company-team-image__volume" src="/images/volume_up.svg" alt="">
+          </li>
+          <li class="company-team-image__item-tag seventh">
+            <i class="company-team-image__tag">Samik Ghosh</i>
+            <img class="company-team-image__volume" src="/images/volume_up.svg" alt="">
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <div data-aos="fade-up">
+    <section class="science-advisors section">
+      <div class="container grid flex-middle">
+        <div class="width-1-2">
+          <h2 class="company-section__title text-size-bigger text-theme-color text-weight-bold">OUR<br />SCIENTIFIC<br />ADVISORS</h2>
+        </div>
+        <div class="company-team__member width-1-2 flex flex-top">
+          <div class="company-team__avatar flex__shrink-fixed">
+            <img src="/images/company-avatar-2.png" alt="">
+          </div>
+          <div class="company-team__content">
+            <h5>Technology Advisor</h5>
+            <p class="company-team__name text-weight-bold">​Samik Ghosh</p>
+            <i class="company-team__divider divider__horizontal-block"></i>
+            <div>
+              <p class="text-line-height text-weight-light">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div data-aos="fade-up">
+    <section class="aikomi-culture section">
+      <div class="container grid flex-top">
+        <div class="width-1-3">
+          <h2 class="company-section__title text-size-bigger text-theme-color text-weight-bold">AIKOMI<br />CULTURE</h2>
+        </div>
+        <div class="width-2-3">
+          <div class="aikomi-culture__paragraph-container flex flex-top">
+            <h4 class="text-size-big text-weight-bold">WHY?</h4>
+            <div class="aikomi-culture__paragraph">
+              <span class="aikomi-culture__mark first text-size-biggest text-theme-color text-weight-bold">“</span>
+              <p class="text-line-height text-weight-light">Can help people with dementia<br />Work on an interesting project<br />Re-connect people to create happiness<br />Dementia could effect me<br />Its fun and challenging<br />Make a difference</p>
+              <span class="aikomi-culture__mark second text-size-biggest text-theme-color text-weight-bold">”</span>
+            </div>
+          </div>
+          <i class="aikomi-culture__divider divider__horizontal-block"></i>
+          <div class="aikomi-culture__paragraph-container flex flex-top">
+            <h4 class="text-size-big text-weight-bold">HOW?</h4>
+            <div class="aikomi-culture__paragraph">
+              <span class="aikomi-culture__mark first text-size-biggest text-theme-color text-weight-bold">“</span>
+              <p class="text-line-height text-weight-light">Shine brightly<br />Turn the tide<br />Use all my talents<br />Bridge culture and generations<br />Show the way<br />Play as a team</p>
+              <span class="aikomi-culture__mark second text-size-biggest text-theme-color text-weight-bold">”</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div data-aos="fade-up">
+    <section class="our-partner section">
+      <div class="container grid flex-top">
+        <div class="width-1-3">
+          <h2 class="company-section__title text-size-bigger text-theme-color text-weight-bold">OUR PARTNER</h2>
+        </div>
+        <div class="width-2-3">
+          <i class="our-partner__divider divider__horizontal-block"></i>
+          <ul class="our-partner__list flex flex-middle flex-space-between">
+            <li>
+              <img class="our-partner__image" src="/images/company-partner-1.png" alt="">
+            </li>
+            <li>
+              <img class="our-partner__image" src="/images/company-partner-2.png" alt="">
+            </li>
+            <li>
+              <img class="our-partner__image" src="/images/company-partner-3.png" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div data-aos="fade-up">
+    <section class="about-us section">
+      <div class="container grid flex-top">
+        <div class="width-1-3">
+          <h2 class="company-section__title text-size-bigger text-theme-color text-weight-bold">ABOUT US</h2>
+        </div>
+        <div class="width-2-3">
+          <div>
+            <h3 class="text-size-big text-weight-bold">HISTORY OF AIKOMI</h3>
+            <div>
+              <p class="about-us__paragraph text-line-height text-weight-light">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+              <p class="about-us__paragraph text-line-height text-weight-light">Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
+            </div>
+          </div>
+          <i class="about-us__divider divider__horizontal-block"></i>
+          <div>
+            <h3 class="text-size-big text-weight-bold">CORPORATE DETAILS</h3>
+            <div>
+              <p class="about-us__paragraph text-line-height text-weight-light">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>

@@ -1,0 +1,87 @@
+.home-person-care__title {
+  margin: 50px auto; }
+
+.home-person-care__paragraph {
+  margin: 40px auto 50px; }
+
+.home-dementia {
+  padding: 70px 0; }
+  .home-dementia__image {
+    max-width: 380px; }
+  .home-dementia__title {
+    padding: 40px 0; }
+  .home-dementia__paragraph {
+    margin: 50px auto; }
+
+.video__container,
+.ipad__container {
+  position: relative; }
+
+.video__container::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  height: 70%;
+  background-color: #F4F4F4; }
+
+.video {
+  position: relative; }
+  .video::before {
+    content: "";
+    display: block;
+    width: 100%;
+    padding: 28% 0;
+    background-color: #FFFFFF;
+    background-image: url(/images/aikomi-home-video.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% auto; }
+  .video iframe {
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .video__divider-container {
+    padding: 100px 0 50px;
+    background-color: #F4F4F4; }
+  .video__divider {
+    height: 93px; }
+
+.ipad {
+  position: relative; }
+  .ipad svg {
+    width: 40px;
+    height: 40px;
+    fill: #EB6666; }
+  .ipad__container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: block;
+    height: 50%;
+    background-color: #F4F4F4; }
+
+.aikomi-platform__paragraphs {
+  margin: 50px auto;
+  max-width: 650px; }
+
+.aikomi-platform__list {
+  margin: auto;
+  max-width: 800px; }
+  .aikomi-platform__list.second {
+    max-width: 600px; }
+
+.aikomi-platform__item {
+  padding: 24px;
+  width: 260px; }
+
+.aikomi-platform__image {
+  max-height: 65px; }
+
+.aikomi-platform__text {
+  display: block;
+  margin-top: 10px; }
