@@ -18,12 +18,12 @@ var _ = require('lodash');
 	or replace it with your own templates / logic.
 */
 exports.initLocals = function (req, res, next) {
-	res.locals.navLinks = [
-		{ label: 'Home', key: 'home', href: '/' },
-		{ label: 'Contact', key: 'contact', href: '/contact' },
-	];
-	res.locals.user = req.user;
-	next();
+  res.locals.navLinks = [
+    { label: 'Home', key: 'home', href: '/' },
+    { label: 'Contact', key: 'contact', href: '/contact' },
+  ];
+  res.locals.user = req.user;
+  next();
 };
 
 
@@ -31,14 +31,14 @@ exports.initLocals = function (req, res, next) {
 	Fetches and clears the flashMessages before a view is rendered
 */
 exports.flashMessages = function (req, res, next) {
-	var flashMessages = {
-		info: req.flash('info'),
-		success: req.flash('success'),
-		warning: req.flash('warning'),
-		error: req.flash('error'),
-	};
-	res.locals.messages = _.some(flashMessages, function (msgs) { return msgs.length; }) ? flashMessages : false;
-	next();
+  var flashMessages = {
+    info: req.flash('info'),
+    success: req.flash('success'),
+    warning: req.flash('warning'),
+    error: req.flash('error'),
+  };
+  res.locals.messages = _.some(flashMessages, function (msgs) { return msgs.length; }) ? flashMessages : false;
+  next();
 };
 
 
@@ -46,10 +46,30 @@ exports.flashMessages = function (req, res, next) {
 	Prevents people from accessing protected pages when they're not signed in
  */
 exports.requireUser = function (req, res, next) {
-	if (!req.user) {
-		req.flash('error', 'Please sign in to access this page.');
-		res.redirect('/keystone/signin');
-	} else {
-		next();
-	}
+  if (!req.user) {
+    req.flash('error', 'Please sign in to access this page.');
+    res.redirect('/keystone/signin');
+  } else {
+    next();
+  }
+};
+
+exports.processCountryLanguage = function (options) {
+  return (req, res, next) => {
+    var country = util.getCountry(req, options);
+
+    res.locals = res.locals || {};
+    res.locals.country = country;
+
+    const localeParams = [];
+    if ((req.params.country || "").length > 0) {
+      localeParams.push(req.params.country);
+    }
+
+    if (localeParams.length > 0) {
+      res.locals.prefixPath = `/${localeParams.join('/')}`;
+    }
+
+    next();
+  };
 };
