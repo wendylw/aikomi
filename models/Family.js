@@ -44,24 +44,18 @@ Contact.add({
     thumb: true,
     storage: fileStorage.storage('family/')
   },
-  address: {
+  becomeFamilyTitle: {
     type: String
   },
-  phoneNumber: {
+  becomeFamilySubtitle: {
+    type: String
+  },
+  becomeFamilyLabel: {
+    type: String
+  },
+  becomeFamilyDescription: {
     type: Types.Textarea
-  },
-  email: {
-    type: Types.Textarea
-  },
-  facebookUrl: {
-    type: Types.Url
-  },
-  twitter: {
-    type: Types.Url
-  },
-  instagram: {
-    type: Types.Url
-  },
+  }
 });
 
 Contact.schema.pre('save', function (next) {

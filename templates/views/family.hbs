@@ -1,6 +1,32 @@
 {{#contentFor "PAGE_LEVEL_STYLES"}}
 <link rel="stylesheet" href="/styles/family.css">
 {{/contentFor}}
+{{#contentFor "PAGE_LEVEL_SCRIPTS"}}
+<script>
+  $(document).ready(function () {
+    $(".gallery__item").each(function(index){
+      $(this).css({
+        top: Math.floor(index / 7) * $(this).height() + 'px',
+        left: (index % 7) * $(this).width() + 'px'
+      });
+    });
+
+    $(".family-name__item img").on('mouseenter', function() {
+      $(this).parent('.family-name__item').find('.family-name__content').css({
+        'opacity': '1',
+        'z-index': '200'
+      });
+    });
+
+    $(".family-name__item img").on('mouseout', function() {
+      $(this).parent('.family-name__item').find('.family-name__content').css({
+        'opacity': '0',
+        'z-index': '0'
+      });
+    });
+  });
+</script>
+{{/contentFor}}
 
 {{!< default}}
 <main class="main">
