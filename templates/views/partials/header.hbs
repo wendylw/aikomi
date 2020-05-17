@@ -5,22 +5,22 @@
     </div>
     <div class="flex flex-middle">
       <ul class="flex flex-middle">
-        <li class="nav__item active">
-          <a class="nav__link" href="./index">Home</a>
+        <li class="nav__item {{#if (getNavActive section 'home')}}active{{/if}}">
+          <a class="nav__link" href="./">Home</a>
         </li>
-        <li class="nav__item">
+        <li class="nav__item {{#if (getNavActive section 'science')}}active{{/if}}">
           <a class="nav__link" href="./science">Science&Tech</a>
         </li>
-        <li class="nav__item">
+        <li class="nav__item {{#if (getNavActive section 'company')}}active{{/if}}">
           <a class="nav__link" href="./company">Company Info</a>
         </li>
-        <li class="nav__item">
+        <li class="nav__item {{#if (getNavActive section 'news')}}active{{/if}}">
           <a class="nav__link" href="./news">News</a>
         </li>
-        <li class="nav__item">
+        <li class="nav__item {{#if (getNavActive section 'contact')}}active{{/if}}">
           <a class="nav__link" href="./contact">Contact Us</a>
         </li>
-        <li class="nav__item">
+        <li class="nav__item {{#if (getNavActive section 'family')}}active{{/if}}">
           <a class="nav__link" href="./family">Aikomi Family</a>
         </li>
       </ul>

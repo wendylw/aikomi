@@ -1,4 +1,7 @@
-// var moment = require('moment');
+var moment = require('moment');
 
-// module.exports = {
-// }
+module.exports = {
+  getNavActive(activeSection, section) {
+    return activeSection === section;
+  }
+}

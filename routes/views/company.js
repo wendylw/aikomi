@@ -1,4 +1,5 @@
 var keystone = require('keystone');
+var commonHelper = require('../../templates/views/helpers/common');
 
 exports = module.exports = function (req, res) {
 
@@ -10,5 +11,7 @@ exports = module.exports = function (req, res) {
   locals.section = 'company';
 
   // Render the view
-  view.render('company');
+  view.render('company', {
+    helpers: commonHelper
+  });
 };
