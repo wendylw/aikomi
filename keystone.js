@@ -55,6 +55,7 @@ keystone.set('routes', require('./routes'));
 keystone.set('nav', {
   sciences: 'sciences',
   homepage: 'home-pages',
+  news: 'news',
   users: 'users',
 });
 

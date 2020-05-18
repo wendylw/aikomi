@@ -19,6 +19,11 @@
 
   &__title {
     padding: 40px 0;
+
+    p {
+      margin: 0;
+      font-size: inherit;
+    }
   }
 
   &__paragraph {
@@ -102,6 +107,12 @@
   &__paragraphs {
     margin: 50px auto;
     max-width: 650px;
+
+    p {
+      font-size: 1.2857rem;
+      font-weight: 300;
+      line-height: 2em;
+    }
   }
 
   &__list {

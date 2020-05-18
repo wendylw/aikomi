@@ -31,6 +31,12 @@ Science.add({
     initial: false,
     unique: true
   },
+  pageName: {
+    label: 'Name',
+    type: String,
+    required: true,
+    initial: true
+  },
   country: {
     type: Types.Select,
     options: Object.keys(constants.COUNTRIES),
@@ -91,6 +97,11 @@ Science.add({
   },
   dementiaCareTriadDescription: {
     type: Types.Textarea
+  },
+  dementiaCareTriadImage: {
+    type: Types.File,
+    thumb: true,
+    storage: fileStorage.storage('science/')
   },
   conceptTitle: {
     type: String

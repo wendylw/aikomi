@@ -6026,12 +6026,11 @@ a {
   border-bottom: 1px solid rgba(151, 151, 151, 0.5);
   background-color: #FFFFFF;
   z-index: 10; }
+  .header__logo {
+    max-width: 150px; }
 
 .main {
   margin-top: 72px; }
-
-.header__logo {
-  max-width: 150px; }
 
 .nav__item {
   margin: 0 20px; }

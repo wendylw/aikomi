@@ -10,6 +10,9 @@
     max-width: 380px; }
   .home-dementia__title {
     padding: 40px 0; }
+    .home-dementia__title p {
+      margin: 0;
+      font-size: inherit; }
   .home-dementia__paragraph {
     margin: 50px auto; }
 
@@ -68,6 +71,10 @@
 .aikomi-platform__paragraphs {
   margin: 50px auto;
   max-width: 650px; }
+  .aikomi-platform__paragraphs p {
+    font-size: 1.2857rem;
+    font-weight: 300;
+    line-height: 2em; }
 
 .aikomi-platform__list {
   margin: auto;

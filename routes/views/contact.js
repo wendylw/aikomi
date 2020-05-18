@@ -1,6 +1,11 @@
 var keystone = require('keystone');
 var Enquiry = keystone.list('Enquiry');
 var commonHelper = require('../../templates/views/helpers/common');
+var constants = require('../../lib/constants');
+
+const {
+  COUNTRIES
+} = constants;
 
 exports = module.exports = function (req, res) {
 

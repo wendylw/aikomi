@@ -8,7 +8,7 @@
  * modules in your project's /lib directory.
  */
 var _ = require('lodash');
-
+var util = require('../lib/util');
 
 /**
 	Initialises the standard view locals

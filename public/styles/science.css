@@ -3,23 +3,10 @@
   position: relative; }
 
 .science-person-center {
-  padding-top: 240px; }
-
-.science-person-center::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(/images/science-section-1.png);
+  padding-top: 240px;
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: 100% auto;
-  filter: alpha(opacity=40);
-  -moz-opacity: 0.4;
-  -khtml-opacity: 0.4;
-  opacity: 0.4; }
+  background-size: 100% auto; }
 
 .science-person-center__cover {
   content: "";

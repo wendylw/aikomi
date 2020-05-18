@@ -7,20 +7,20 @@ var slug = require('limax');
 var Types = keystone.Field.Types;
 
 /**
- * Contact Model
+ * Family Model
  * ===========
  */
 
-var Contact = new keystone.List('Contact', {
+var Family = new keystone.List('Family', {
   autokey: {
     from: 'slug',
     path: 'key'
   },
   map: { name: 'label' },
-  label: 'Contact',
+  label: 'Family',
 });
 
-Contact.add({
+Family.add({
   slug: {
     type: String,
     noedit: true,
@@ -58,12 +58,12 @@ Contact.add({
   }
 });
 
-Contact.schema.pre('save', function (next) {
+Family.schema.pre('save', function (next) {
   this.label = `${this.pageName} (${this.country})`;
   this.slug = slug(`${this._id}-(${this.country})`);
   next();
 });
 
-Contact.defaultColumns = 'label, title';
+Family.defaultColumns = 'label, title';
 
-Contact.register();
+Family.register();
