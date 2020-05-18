@@ -31,7 +31,7 @@
 {{!< default}}
 <main class="main">
   <section class="banner text-center">
-    <img class="banner__image" src="/images/family-banner.jpg" alt="">
+    <img class="banner__image" src="/uploads/family/{{family.bannerImage}}" alt="">
     <ul class="gallery__list">
       <li class="gallery__item">
         <img src="/images/volume_up.svg" alt="">
@@ -102,14 +102,14 @@
   <div data-aos="fade-up">
     <section class="family-animation section">
       <div class="container-sm">
-        <h3 class="text-size-bigger text-weight-bold">Let’s become a Aikomi Family</h3>
-        <h4 class="family__section-subtitle text-size-big">認知症患者の未来を変えるために私たちにもできること</h4>
+        <h3 class="text-size-bigger text-weight-bold">{{family.becomeFamilyTitle}}</h3>
+        <h4 class="family__section-subtitle text-size-big">{{family.becomeFamilySubtitle}}</h4>
         <i class="theme-divider__horizontal-block"></i>
         <div class="grid">
           <div class="width-1-2">
-            <h4 class="text-size-big text-weight-bold">写真・動画提供</h4>
+            <h4 class="text-size-big text-weight-bold">{{family.becomeFamilyLabel}}</h4>
             <div class="family-animation__paragraph">
-              <p class="text-line-height text-weight-light">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.</p>
+              <p class="text-line-height text-weight-light">{{family.becomeFamilyDescription}}</p>
             </div>
             <div class="family-animation__video">
               <iframe width="100%" height="315" src="https://www.youtube.com/embed/HobxLbPhrMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -152,11 +152,11 @@
     <section class="family-name section">
       <div class="container-sm">
         <div>
-          <h3 class="text-size-bigger text-weight-bold">Aikomi family’s name</h3>
-          <h4 class="family__section-subtitle text-size-big">企業・主婦・ユーチューバー・介護士・料理人・画家・書道家・飲食店</h4>
+          <h3 class="text-size-bigger text-weight-bold">{{family.familyNameTitle}}/h3>
+          <h4 class="family__section-subtitle text-size-big">{{family.familyNameSubtitle}}</h4>
           <i class="theme-divider__horizontal-block"></i>
           <div class="family-name__paragraph grid">
-            <p class="width-1-2 text-line-height text-weight-light">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,。</p>
+            <p class="width-1-2 text-line-height text-weight-light">{{family.familyNameDescription}}</p>
           </div>
         </div>
         <div class="family-name__image-container">

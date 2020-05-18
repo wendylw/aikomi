@@ -32,6 +32,12 @@ Family.add({
     initial: false,
     unique: true
   },
+  pageName: {
+    label: 'Name',
+    type: String,
+    required: true,
+    initial: true
+  },
   country: {
     type: Types.Select,
     options: Object.keys(constants.COUNTRIES),
@@ -54,6 +60,15 @@ Family.add({
     type: String
   },
   becomeFamilyDescription: {
+    type: Types.Textarea
+  },
+  familyNameTitle: {
+    type: String
+  },
+  familyNameSubtitle: {
+    type: String
+  },
+  familyNameDescription: {
     type: Types.Textarea
   }
 });
