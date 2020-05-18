@@ -51,6 +51,13 @@ Company.add({
     type: Types.Textarea,
     note: 'Use &lt;br\/&gt; for line feed'
   },
+  challengingBehaviourTitle: {
+    type: String,
+  },
+  cultureBehaviour: {
+    type: Types.Textarea,
+    note: 'Use &lt;br\/&gt; for line feed'
+  },
   aboutUsHistory: {
     type: Types.Html,
     wysiwyg: true
