@@ -40,6 +40,9 @@
     -ms-transition: opacity 0.4s;
 
     &.show {
+      display: flex !important;
+      display: -ms-flexbox !important;
+      display: -webkit-flex !important;
       opacity: 1;
     }
   }

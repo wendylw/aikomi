@@ -28,6 +28,9 @@
   -webkit-transition: opacity 0.4s;
   -ms-transition: opacity 0.4s; }
   .company-team__member.show {
+    display: flex !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
     opacity: 1; }
 
 .company-team__image {

@@ -44,33 +44,12 @@ Company.add({
     initial: true,
     required: true
   },
-  cultureTitle: {
-    type: String
+  cultureReasonTitle: {
+    type: String,
   },
   cultureReason: {
-    type: Types.Textarea
-  },
-  cultureBehaviour: {
-    type: Types.Textarea
-  },
-  challengingBehaviourDescription: {
-    type: Types.Textarea
-  },
-  dementiaCareTriadTitle: {
-    type: String
-  },
-  dementiaCareTriadSubTitle: {
-    type: Types.TextArray,
-    separator: '|'
-  },
-  dementiaCareTriadDescription: {
-    type: Types.Textarea
-  },
-  conceptTitle: {
-    type: String
-  },
-  conceptDescription: {
-    type: Types.Textarea
+    type: Types.Textarea,
+    note: 'Use &lt;br\/&gt; for line feed'
   },
   aboutUsHistory: {
     type: Types.Html,

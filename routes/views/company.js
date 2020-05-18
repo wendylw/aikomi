@@ -17,7 +17,7 @@ exports = module.exports = function (req, res) {
   locals.section = 'company';
 
   view.on('init', function (next) {
-    const q = keystone.list('Science').model.find({});
+    const q = keystone.list('Company').model.find({});
 
     q.exec(function (err, result) {
       locals.company = result.find(item => item.country === (country || COUNTRIES.EN).toUpperCase());
