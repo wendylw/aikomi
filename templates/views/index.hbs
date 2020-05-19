@@ -70,28 +70,12 @@
           {{{home.introductionDescription}}}
         </div>
         <ul class="aikomi-platform__list flex flex-top flex-space-around">
+          {{#each home.platformAdvantages}}
           <li class="aikomi-platform__item text-center">
-            <img class="aikomi-platform__image" src="/images/aikomi-home-platform-1.png" alt="">
-            <span class="aikomi-platform__text text-weight-light">Personalized Programs</span>
+            <img class="aikomi-platform__image" src="/uploads/home/{{{this.image.filename}}}" alt="">
+            <span class="aikomi-platform__text text-weight-light">{{this.description}}</span>
           </li>
-          <li class="aikomi-platform__item text-center">
-            <img class="aikomi-platform__image" src="/images/aikomi-home-platform-2.png" alt="">
-            <span class="aikomi-platform__text text-weight-light">Monitoring & Optimization</span>
-          </li>
-          <li class="aikomi-platform__item text-center">
-            <img class="aikomi-platform__image" src="/images/aikomi-home-platform-3.png" alt="">
-            <span class="aikomi-platform__text text-weight-light">Home Therapist</span>
-          </li>
-        </ul>
-        <ul class="aikomi-platform__list second flex flex-top flex-space-around">
-          <li class="aikomi-platform__item text-center">
-            <img class="aikomi-platform__image" src="/images/aikomi-home-platform-4.png" alt="">
-            <span class="aikomi-platform__text text-weight-light">Peer Support</span>
-          </li>
-          <li class="aikomi-platform__item text-center">
-            <img class="aikomi-platform__image" src="/images/aikomi-home-platform-5.png" alt="">
-            <span class="aikomi-platform__text text-weight-light">Counselling Service</span>
-          </li>
+          {{/each}}
         </ul>
       </div>
     </section>

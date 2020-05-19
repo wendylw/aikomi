@@ -17,7 +17,10 @@ exports = module.exports = function (req, res) {
   locals.section = 'home';
 
   view.on('init', function (next) {
-    const q = keystone.list('HomePage').model.find({});
+    const q = keystone.list('HomePage').model.find({}).populate({
+      path: 'platformAdvantages',
+      populate: ['platformAdvantages'],
+    });
 
     q.exec(function (err, result) {
       locals.home = result.find(item => item.country === (country || COUNTRIES.EN).toUpperCase());

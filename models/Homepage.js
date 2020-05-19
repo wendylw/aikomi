@@ -79,6 +79,13 @@ HomePage.add({
   introductionDescription: {
     type: Types.Html,
     wysiwyg: true
+  },
+  platformAdvantages: {
+    type: Types.Relationship,
+    ref: 'PlatformAdvantages',
+    many: true,
+    filters: { country: ':country' },
+    createInline: true,
   }
 });
 
@@ -87,6 +94,8 @@ HomePage.schema.pre('save', function (next) {
   this.slug = slug(`${this._id}-(${this.country})`);
   next();
 });
+
+HomePage.relationship({ path: 'platformAdvantages', ref: 'PlatformAdvantages', refPath: 'group' });
 
 HomePage.defaultColumns = 'label, title';
 

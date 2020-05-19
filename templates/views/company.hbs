@@ -147,15 +147,11 @@
         <div class="width-2-3">
           <i class="our-partner__divider divider__horizontal-block"></i>
           <ul class="our-partner__list flex flex-middle flex-space-between">
+            {{#each company.companyPartners}}
             <li>
-              <img class="our-partner__image" src="/images/company-partner-1.png" alt="">
+              <img class="our-partner__image" src="/uploads/company/{{{this.image.filename}}}" alt="">
             </li>
-            <li>
-              <img class="our-partner__image" src="/images/company-partner-2.png" alt="">
-            </li>
-            <li>
-              <img class="our-partner__image" src="/images/company-partner-3.png" alt="">
-            </li>
+            {{/each}}
           </ul>
         </div>
       </div>

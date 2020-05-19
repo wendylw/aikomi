@@ -66,6 +66,13 @@ Company.add({
     type: Types.Html,
     wysiwyg: true
   },
+  companyPartners: {
+    type: Types.Relationship,
+    ref: 'CompanyPartners',
+    many: true,
+    filters: { country: ':country' },
+    createInline: true,
+  }
 });
 
 Company.schema.pre('save', function (next) {
@@ -73,6 +80,8 @@ Company.schema.pre('save', function (next) {
   this.slug = slug(`${this._id}-(${this.country})`);
   next();
 });
+
+Company.relationship({ path: 'companyPartners', ref: 'CompanyPartners', refPath: 'group' });
 
 Company.defaultColumns = 'label, title';
 
