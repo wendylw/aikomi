@@ -48,6 +48,20 @@ News.add({
     type: Types.File,
     thumb: true,
     storage: fileStorage.storage('news/')
+  },
+  recentNewsList: {
+    type: Types.Relationship,
+    ref: 'RecentNewsList',
+    many: true,
+    filters: { country: ':country' },
+    createInline: true,
+  },
+  newsTypes: {
+    type: Types.Relationship,
+    ref: 'NewsTypes',
+    many: true,
+    filters: { country: ':country' },
+    createInline: true,
   }
 });
 
@@ -56,6 +70,9 @@ News.schema.pre('save', function (next) {
   this.slug = slug(`${this._id}-(${this.country})`);
   next();
 });
+
+News.relationship({ path: 'recentNewsList', ref: 'RecentNewsList', refPath: 'group' });
+News.relationship({ path: 'newsTypes', ref: 'NewsTypes', refPath: 'group' });
 
 News.defaultColumns = 'label, title';
 

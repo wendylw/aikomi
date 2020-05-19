@@ -42,96 +42,18 @@
     <section class="section">
       <div class="container-sm">
         <div class="owl-carousel owl-theme">
+          {{#each news.recentNewsList}}
           <div class="item news__item"> 
             <div class="news__card">
-              <time class="news__time text-size-big text-theme-color text-weight-bold">October 03, 2019</time>
-              <h4 class="news__title text-weight-bold">日経MJに掲載されました</h4>
-              <p class="text-line-height">2019年10月4日付の日経MJに弊社の取組みが紹介されました。今後も積極的に弊社の活動を発信し、認知症の理解を広めていきたいと考えています……</p>
+              <time class="news__time text-size-big text-theme-color text-weight-bold">{{formatDate this.publicDate 'LL'}}</time>
+              <h4 class="news__title text-weight-bold">{{this.title}}</h4>
+              <p class="text-line-height">{{this.description}}</p>
               <div class="news__sign-container text-right">
                 <span class="news__sign">こちらをクリック</span>
               </div>
             </div>
           </div>
-          <div class="item news__item"> 
-            <div class="news__card">
-              <time class="news__time text-size-big text-theme-color text-weight-bold">October 03, 2019</time>
-              <h4 class="news__title text-weight-bold">日経MJに掲載されました</h4>
-              <p class="text-line-height">2019年10月4日付の日経MJに弊社の取組みが紹介されました。今後も積極的に弊社の活動を発信し、認知症の理解を広めていきたいと考えています……</p>
-              <div class="news__sign-container text-right">
-                <span class="news__sign">こちらをクリック</span>
-              </div>
-            </div>
-          </div>
-          <div class="item news__item"> 
-            <div class="news__card">
-              <time class="news__time text-size-big text-theme-color text-weight-bold">October 03, 2019</time>
-              <h4 class="news__title text-weight-bold">日経MJに掲載されました</h4>
-              <p class="text-line-height">2019年10月4日付の日経MJに弊社の取組みが紹介されました。今後も積極的に弊社の活動を発信し、認知症の理解を広めていきたいと考えています……</p>
-              <div class="news__sign-container text-right">
-                <span class="news__sign">こちらをクリック</span>
-              </div>
-            </div>
-          </div>
-          <div class="item news__item"> 
-            <div class="news__card">
-              <time class="news__time text-size-big text-theme-color text-weight-bold">October 03, 2019</time>
-              <h4 class="news__title text-weight-bold">日経MJに掲載されました</h4>
-              <p class="text-line-height">2019年10月4日付の日経MJに弊社の取組みが紹介されました。今後も積極的に弊社の活動を発信し、認知症の理解を広めていきたいと考えています……</p>
-              <div class="news__sign-container text-right">
-                <span class="news__sign">こちらをクリック</span>
-              </div>
-            </div>
-          </div>
-          <div class="item news__item"> 
-            <div class="news__card">
-              <time class="news__time text-size-big text-theme-color text-weight-bold">October 03, 2019</time>
-              <h4 class="news__title text-weight-bold">日経MJに掲載されました</h4>
-              <p class="text-line-height">2019年10月4日付の日経MJに弊社の取組みが紹介されました。今後も積極的に弊社の活動を発信し、認知症の理解を広めていきたいと考えています……</p>
-              <div class="news__sign-container text-right">
-                <span class="news__sign">こちらをクリック</span>
-              </div>
-            </div>
-          </div>
-          <div class="item news__item"> 
-            <div class="news__card">
-              <time class="news__time text-size-big text-theme-color text-weight-bold">October 03, 2019</time>
-              <h4 class="news__title text-weight-bold">日経MJに掲載されました</h4>
-              <p class="text-line-height">2019年10月4日付の日経MJに弊社の取組みが紹介されました。今後も積極的に弊社の活動を発信し、認知症の理解を広めていきたいと考えています……</p>
-              <div class="news__sign-container text-right">
-                <span class="news__sign">こちらをクリック</span>
-              </div>
-            </div>
-          </div>
-          <div class="item news__item"> 
-            <div class="news__card">
-              <time class="news__time text-size-big text-theme-color text-weight-bold">October 03, 2019</time>
-              <h4 class="news__title text-weight-bold">日経MJに掲載されました</h4>
-              <p class="text-line-height">2019年10月4日付の日経MJに弊社の取組みが紹介されました。今後も積極的に弊社の活動を発信し、認知症の理解を広めていきたいと考えています……</p>
-              <div class="news__sign-container text-right">
-                <span class="news__sign">こちらをクリック</span>
-              </div>
-            </div>
-          </div>
-          <div class="item news__item"> 
-            <div class="news__card">
-              <time class="news__time text-size-big text-theme-color text-weight-bold">October 03, 2019</time>
-              <h4 class="news__title text-weight-bold">日経MJに掲載されました</h4>
-              <p class="text-line-height">2019年10月4日付の日経MJに弊社の取組みが紹介されました。今後も積極的に弊社の活動を発信し、認知症の理解を広めていきたいと考えています……</p>
-              <div class="news__sign-container text-right">
-                <span class="news__sign">こちらをクリック</span>
-              </div>
-            </div>
-          </div>
-          <div class="item news__item"> 
-            <div class="news__card">
-              <time class="news__time text-size-big text-theme-color text-weight-bold">October 03, 2019</time>
-              <h4 class="news__title text-weight-bold">日経MJに掲載されました</h4>
-              <p class="text-line-height">2019年10月4日付の日経MJに弊社の取組みが紹介されました。今後も積極的に弊社の活動を発信し、認知症の理解を広めていきたいと考えています……</p>
-              <div class="news__sign-container text-right">
-                <span class="news__sign">こちらをクリック</span>
-              </div>
-            </div>
-          </div>
+          {{/each}}
         </div>
       </div>
     </section>
@@ -144,72 +66,21 @@
         <div class="news-table__container">
           <ul class="news__table-tab-list">
             <li class="news__table-tab text-weight-bold active">ALL</li>
-            <li class="news__table-tab text-weight-bold">NEWS</li>
-            <li class="news__table-tab text-weight-bold">EVENT</li>
-            <li class="news__table-tab text-weight-bold">BLOG</li>
+            {{#each news.newsTypes}}
+            <li class="news__table-tab text-weight-bold">{{this.name}}</li>
+            {{/each}}
           </ul>
+          {{#each news.newsTypes}}
           <table>
+            {{#each this.newsHistoryList}}
             <tr>
-              <td>2020.02.21</td>
-              <td class="text-theme-color"><i>Event</i></td>
-              <td><p class="text-weight-bold">Orem ipsum dolor sit amet, consectetuer adipiscing elit</p></td>
+              <td>{{formatDate this.publicDate 'YYYY.MM.DD'}}</td>
+              <td class="text-theme-color"><i>{{../name}}</i></td>
+              <td><p class="text-weight-bold">{{this.description}}</p></td>
             </tr>
-            <tr>
-              <td>2020.02.21</td>
-              <td class="text-theme-color"><i>Event</i></td>
-              <td><p class="text-weight-bold">Reet dolore magna aliquam erat volutpat. Ut wisi enim ad minim</p></td>
-            </tr>
-            <tr>
-              <td>2020.02.21</td>
-              <td class="text-theme-color"><i>Event</i></td>
-              <td><p class="text-weight-bold">im veniam, quis nostrud exerci tation ullamcorper suscipit</p></td>
-            </tr>
-            <tr>
-              <td>2020.02.21</td>
-              <td class="text-theme-color"><i>Event</i></td>
-              <td><p class="text-weight-bold">Orem ipsum dolor sit amet, consectetuer adipiscing elit</p></td>
-            </tr>
-            <tr>
-              <td>2020.02.21</td>
-              <td class="text-theme-color"><i>Event</i></td>
-              <td><p class="text-weight-bold">Orem ipsum dolor sit amet, consectetuer adipiscing elit</p></td>
-            </tr>
-            <tr>
-              <td>2020.02.21</td>
-              <td class="text-theme-color"><i>Event</i></td>
-              <td><p class="text-weight-bold">Reet dolore magna aliquam erat volutpat. Ut wisi enim ad minim</p></td>
-            </tr>
-            <tr>
-              <td>2020.02.21</td>
-              <td class="text-theme-color"><i>Event</i></td>
-              <td><p class="text-weight-bold">im veniam, quis nostrud exerci tation ullamcorper suscipit</p></td>
-            </tr>
-            <tr>
-              <td>2020.02.21</td>
-              <td class="text-theme-color"><i>Event</i></td>
-              <td><p class="text-weight-bold">Orem ipsum dolor sit amet, consectetuer adipiscing elit</p></td>
-            </tr>
-            <tr>
-              <td>2020.02.21</td>
-              <td class="text-theme-color"><i>Event</i></td>
-              <td><p class="text-weight-bold">Orem ipsum dolor sit amet, consectetuer adipiscing elit</p></td>
-            </tr>
-            <tr>
-              <td>2020.02.21</td>
-              <td class="text-theme-color"><i>Event</i></td>
-              <td><p class="text-weight-bold">Reet dolore magna aliquam erat volutpat. Ut wisi enim ad minim</p></td>
-            </tr>
-            <tr>
-              <td>2020.02.21</td>
-              <td class="text-theme-color"><i>Event</i></td>
-              <td><p class="text-weight-bold">im veniam, quis nostrud exerci tation ullamcorper suscipit</p></td>
-            </tr>
-            <tr>
-              <td>2020.02.21</td>
-              <td class="text-theme-color"><i>Event</i></td>
-              <td><p class="text-weight-bold">Orem ipsum dolor sit amet, consectetuer adipiscing elit</p></td>
-            </tr>
+            {{/each}}
           </table>
+          {{/each}}
         </div>
       </div>
     </section>
