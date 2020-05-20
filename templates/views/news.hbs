@@ -25,8 +25,23 @@
 
   $(document).ready(function () {
     $(".news__table-tab").on('click', function(){
+      var currentId = $(this).attr('id');
+
       $('.news__table-tab').removeClass('active');
       $(this).addClass('active');
+
+      if (currentId === 'all') {
+        $('.news__table-list').css({
+          display: 'table'
+        });
+      } else {
+        $('.news__table-list').css({
+          display: 'none'
+        });
+        $('#tableList-' + currentId).css({
+          display: 'table'
+        });
+      }
     });
   });
 </script>
@@ -65,13 +80,13 @@
         <h2 class="text-center text-size-bigger text-theme-color text-weight-bold">DISCOVER NEWS</h2>
         <div class="news-table__container">
           <ul class="news__table-tab-list">
-            <li class="news__table-tab text-weight-bold active">ALL</li>
+            <li id="all" class="news__table-tab text-weight-bold active">ALL</li>
             {{#each news.newsTypes}}
-            <li class="news__table-tab text-weight-bold">{{this.name}}</li>
+            <li id="{{this._id}}" class="news__table-tab text-weight-bold">{{this.name}}</li>
             {{/each}}
           </ul>
           {{#each news.newsTypes}}
-          <table>
+          <table class="news__table-list" id="tableList-{{this._id}}">
             {{#each this.newsHistoryList}}
             <tr>
               <td>{{formatDate this.publicDate 'YYYY.MM.DD'}}</td>
