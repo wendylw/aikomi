@@ -17,7 +17,10 @@ exports = module.exports = function (req, res) {
   locals.section = 'family';
 
   view.on('init', function (next) {
-    const q = keystone.list('Family').model.find({});
+    const q = keystone.list('Family').model.find({}).populate({
+      path: 'familyNameList',
+      populate: ['familyNameList'],
+    });
 
     q.exec(function (err, result) {
       locals.family = result.find(item => item.country === (country || COUNTRIES.EN).toUpperCase());

@@ -71,7 +71,8 @@ HomePage.add({
     storage: fileStorage.storage('home/')
   },
   video: {
-    type: String
+    type: String,
+    note: 'Use &lt;iframe&gt;'
   },
   introductionTitle: {
     type: String

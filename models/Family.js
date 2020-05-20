@@ -62,14 +62,64 @@ Family.add({
   becomeFamilyDescription: {
     type: Types.Textarea
   },
+  becomeFamilyVideoTitle: {
+    type: String
+  },
+  becomeFamilyVideo: {
+    type: String,
+    note: 'Use &lt;iframe&gt;'
+  },
+  becomeFamilyImageI: {
+    type: Types.File,
+    thumb: true,
+    storage: fileStorage.storage('family/')
+  },
+  becomeFamilyImageITitle: {
+    type: String,
+  },
+  becomeFamilyImageIDescription: {
+    type: Types.Textarea
+  },
+  becomeFamilyImageII: {
+    type: Types.File,
+    thumb: true,
+    storage: fileStorage.storage('family/')
+  },
+  becomeFamilyImageIITitle: {
+    type: String,
+  },
+  becomeFamilyImageIIDescription: {
+    type: Types.Textarea
+  },
+  becomeFamilyImageIII: {
+    type: Types.File,
+    thumb: true,
+    storage: fileStorage.storage('family/')
+  },
+  becomeFamilyImageIIITitle: {
+    type: String,
+  },
+  becomeFamilyImageIIIDescription: {
+    type: Types.Textarea
+  },
   familyNameTitle: {
     type: String
+  },
+  familyNameDescription: {
+    type: Types.Textarea
   },
   familyNameSubtitle: {
     type: String
   },
   familyNameDescription: {
     type: Types.Textarea
+  },
+  familyNameList: {
+    type: Types.Relationship,
+    ref: 'FamilyNameList',
+    many: true,
+    filters: { country: ':country' },
+    createInline: true,
   }
 });
 
@@ -78,6 +128,8 @@ Family.schema.pre('save', function (next) {
   this.slug = slug(`${this._id}-(${this.country})`);
   next();
 });
+
+Family.relationship({ path: 'familyNameList', ref: 'FamilyNameList', refPath: 'group' });
 
 Family.defaultColumns = 'label, title';
 
