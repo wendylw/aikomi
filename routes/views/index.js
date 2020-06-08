@@ -25,8 +25,13 @@ exports = module.exports = function (req, res) {
     q.exec(function (err, result) {
       locals.home = result.find(item => item.country === (country || COUNTRIES.EN).toUpperCase());
 
+      console.log(country);
+      console.log('home===>2', locals.home);
+
       if (!locals.home) {
         locals.home = result.find(item => item.country === COUNTRIES.EN.toUpperCase());
+
+        console.log('home===>1', locals.home);
       }
 
       next(err);
