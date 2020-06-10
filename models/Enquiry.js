@@ -76,6 +76,11 @@ Contact.add({
     initial: true,
     required: true
   },
+  bannerImage: {
+    type: Types.File,
+    thumb: true,
+    storage: fileStorage.storage('contact/')
+  },
   email: { type: Types.Email },
   address: { type: String },
   phone: { type: String },
