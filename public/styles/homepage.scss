@@ -14,7 +14,7 @@
   padding: 70px 0;
 
   &__image {
-    max-width: 380px;
+    width: 380px;
   }
 
   &__title {
@@ -118,6 +118,7 @@
   &__list {
     margin: auto;
     max-width: 800px;
+    flex-wrap: wrap;
 
     &.second {
       max-width: 600px;
@@ -136,5 +137,13 @@
   &__text {
     display: block;
     margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-dementia {
+    &__image-container {
+      text-align: center;
+    }
   }
 }

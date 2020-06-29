@@ -7,7 +7,7 @@
 .home-dementia {
   padding: 70px 0; }
   .home-dementia__image {
-    max-width: 380px; }
+    width: 380px; }
   .home-dementia__title {
     padding: 40px 0; }
     .home-dementia__title p {
@@ -78,7 +78,8 @@
 
 .aikomi-platform__list {
   margin: auto;
-  max-width: 800px; }
+  max-width: 800px;
+  flex-wrap: wrap; }
   .aikomi-platform__list.second {
     max-width: 600px; }
 
@@ -92,3 +93,7 @@
 .aikomi-platform__text {
   display: block;
   margin-top: 10px; }
+
+@media (max-width: 768px) {
+  .home-dementia__image-container {
+    text-align: center; } }
