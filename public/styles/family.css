@@ -115,6 +115,7 @@
   z-index: 100; }
 
 .family-name__content {
+  display: none;
   position: absolute;
   padding: 30px;
   width: 374px;
@@ -153,3 +154,13 @@
 
 .family-name__content-paragraph {
   margin-top: 10px; }
+
+@media (max-width: 768px) {
+  .family-animation__paragraph {
+    max-width: 100%; }
+  .family-animation__video {
+    margin-right: 0; }
+  .family-animation__video-text-container, .family-animation__text-container {
+    width: 90%; }
+  .family-animation__item {
+    padding: 15px 0; } }

@@ -148,3 +148,9 @@
   .about-us__divider {
     margin: 50px 0;
     background-color: rgba(151, 151, 151, 0.5); }
+
+@media (max-width: 768px) {
+  .company-section__title {
+    text-align: center; }
+    .company-section__title br {
+      display: inline; } }

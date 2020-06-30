@@ -164,3 +164,18 @@
   margin: 50px 0;
   min-height: 572px;
   background-color: #FAFAFA; }
+
+@media (max-width: 768px) {
+  .science-challenging__list {
+    max-width: 100%; }
+    .science-challenging__list .width-1-2 {
+      width: 50%; }
+  .science-platform__item-line.first, .science-platform__item-line.second,
+  .science-platform__content-container > img {
+    opacity: 0; }
+  .science-platform__content {
+    position: relative; }
+  .science-platform__content-first {
+    left: 0; }
+  .science-platform__content-second {
+    right: 0; } }

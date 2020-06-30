@@ -13,6 +13,7 @@
 
     $(".family-name__item img").on('mouseenter', function() {
       $(this).parent('.family-name__item').find('.family-name__content').css({
+        'display': 'block',
         'opacity': '1',
         'z-index': '200'
       });
@@ -20,6 +21,7 @@
 
     $(".family-name__item img").on('mouseout', function() {
       $(this).parent('.family-name__item').find('.family-name__content').css({
+        'display': 'none',
         'opacity': '0',
         'z-index': '0'
       });

@@ -207,3 +207,15 @@
     background-color: rgba(151, 151, 151, 0.5);
   }
 }
+
+@media (max-width: 768px) {
+  .company-section {
+    &__title {
+      text-align: center;
+
+      br {
+        display: inline;
+      }
+    }
+  }
+}

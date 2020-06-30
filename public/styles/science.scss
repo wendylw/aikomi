@@ -203,3 +203,35 @@
   min-height: 572px;
   background-color: #FAFAFA;
 }
+
+@media (max-width: 768px) {
+  .science-challenging {
+    &__list {
+      max-width: 100%;
+
+      .width-1-2 {
+        width: 50%;
+      }
+    }
+  }
+
+  .science-platform {
+    &__item-line.first,
+    &__item-line.second,
+    &__content-container > img {
+      opacity: 0;
+    }
+
+    &__content {
+      position: relative;
+    }
+
+    &__content-first {
+      left: 0;
+    }
+
+    &__content-second {
+      right: 0;
+    }
+  }
+}

@@ -146,6 +146,7 @@
   }
 
   &__content {
+    display: none;
     position: absolute;
     padding: 30px;
     width: 374px;
@@ -191,5 +192,26 @@
 
   &__content-paragraph {
     margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .family-animation {
+    &__paragraph {
+      max-width: 100%;
+    }
+
+    &__video {
+      margin-right: 0;
+    }
+
+    &__video-text-container,
+    &__text-container {
+      width: 90%;
+    }
+
+    &__item {
+      padding: 15px 0;
+    }
   }
 }
