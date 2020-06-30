@@ -297,6 +297,10 @@ a {
     background-color: $gray-3;
     border-radius: 4px;
   }
+
+  &__close {
+    display: none;
+  }
 }
 /* end of Header */
 
@@ -495,6 +499,7 @@ a {
     }
 
     &__close {
+      display: block;
       padding: 12px;  
     }
   }
