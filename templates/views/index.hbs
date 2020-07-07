@@ -72,8 +72,10 @@
         <ul class="aikomi-platform__list flex flex-top flex-space-around">
           {{#each home.platformAdvantages}}
           <li class="aikomi-platform__item text-center">
-            <img class="aikomi-platform__image" src="/uploads/home/{{{this.image.filename}}}" alt="">
-            <span class="aikomi-platform__text text-weight-light">{{this.description}}</span>
+            <a class="aikomi-platform__item-link" href="{{{this.url}}}">
+              <img class="aikomi-platform__image" src="/uploads/home/{{{this.image.filename}}}" alt="">
+              <span class="aikomi-platform__text text-weight-light">{{this.description}}</span>
+            </a>
           </li>
           {{/each}}
         </ul>

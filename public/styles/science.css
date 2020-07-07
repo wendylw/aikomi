@@ -44,6 +44,8 @@
 
 .science-dementia__list {
   margin: 30px 0; }
+  .science-dementia__list li:last-child {
+    display: none; }
 
 .science-dementia__item {
   display: inline-block; }

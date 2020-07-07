@@ -22,6 +22,9 @@ PlatformAdvantages.add({
   description: {
     type: Types.Textarea
   },
+  url: {
+    type: String,
+  },
   country: {
     type: Types.Select,
     options: Object.keys(constants.COUNTRIES),

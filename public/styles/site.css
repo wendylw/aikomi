@@ -6061,6 +6061,9 @@ a {
   background-color: #ECECEC;
   border-radius: 4px; }
 
+.nav__close {
+  display: none; }
+
 /* end of Header */
 /* Footer */
 .footer::before {
@@ -6212,6 +6215,7 @@ a {
     border-top: 0;
     background-color: #ffa88f; }
   .nav__close {
+    display: block;
     padding: 12px; } }
 
 @media (max-width: 768px) {

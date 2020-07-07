@@ -7,5 +7,5 @@ module.exports = {
 
   formatDate(time, formatString) {
     return moment(time).format(formatString);
-  }
+  },
 }

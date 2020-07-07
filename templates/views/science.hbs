@@ -62,11 +62,12 @@
           <div class="science-dementia__content text-right">
             <h3 class="science-dementia__title text-size-bigger text-right text-weight-bold">{{science.dementiaCareTriadTitle}}</h3>
             <ul class="science-dementia__list flex flex-middle flex-end">
-              <li class="science-dementia__item"><span class="text-size-big text-weight-bold">challenging behaviours</span></li>
+              {{#each science.dementiaCareTriadSubTitle}}
+              <li class="science-dementia__item"><span class="text-size-big text-weight-bold">{{{this}}}</span></li>
               <li class="science-dementia__item-svg">
                 <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24"><g><rect fill="none" height="24" width="24"/></g><g><g/><g><path d="M22,8l-4-4v3H3v2h15v3L22,8z"/><path d="M2,16l4,4v-3h15v-2H6v-3L2,16z"/></g></g></svg>
               </li>
-              <li class="science-dementia__item"><span class="text-size-big text-weight-bold">triad dysfunction</span></li>
+              {{/each}}
             </ul>
             <i class="theme-divider__horizontal-block"></i>
             <div class="science-dementia__paragraph">
