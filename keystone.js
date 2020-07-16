@@ -67,7 +67,7 @@ keystone.set('nav', {
 // Configure i18n
 i18n.configure({
   objectNotation: true,
-  locales: ['en', 'zh', 'th'],
+  locales: ['en', 'ja'],
   directory: __dirname + '/locales',
   extension: '.json',
   defaultLocale: 'en',

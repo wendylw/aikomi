@@ -45,6 +45,7 @@ tr > td:first-child {
 
   &__card p {
     font-size: 12px;
+    word-break: break-all;
   }
 
   &__time {

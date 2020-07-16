@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="/styles/news.css">
 {{/contentFor}}
 {{#contentFor "PAGE_LEVEL_SCRIPTS"}}
-<script src="./js/owl.carousel.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
 <script>
   $('.owl-carousel').owlCarousel({
       loop:true,
@@ -64,7 +64,7 @@
               <h4 class="news__title text-weight-bold">{{this.title}}</h4>
               <p class="text-line-height">{{this.description}}</p>
               <div class="news__sign-container text-right">
-                <span class="news__sign">こちらをクリック</span>
+                <span class="news__sign">{{__ "Click Here"}}</span>
               </div>
             </div>
           </div>

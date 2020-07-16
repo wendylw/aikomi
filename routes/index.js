@@ -28,6 +28,7 @@ keystone.pre('routes', i18n.init);
 
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
+keystone.pre('routes', middleware.setLocale);
 keystone.pre('render', middleware.flashMessages);
 
 // Import Route Controllers
@@ -38,11 +39,11 @@ var routes = {
 // Setup Route Bindings
 exports = module.exports = function (app) {
   // Views
-  app.get('/company', routes.views.company);
-  app.get('/family', routes.views.family);
-  app.get('/news', routes.views.news);
-  app.get('/science', routes.views.science);
-  app.all('/contact', routes.views.contact);
+  app.get('/company/:country?', middleware.processCountryLanguage({ path: 'company' }), routes.views.company);
+  app.get('/family/:country?', middleware.processCountryLanguage({ path: 'family' }), routes.views.family);
+  app.get('/news/:country?', middleware.processCountryLanguage({ path: 'news' }), routes.views.news);
+  app.get('/science/:country?', middleware.processCountryLanguage({ path: 'science' }), routes.views.science);
+  app.all('/contact/:country?', middleware.processCountryLanguage({ path: 'contact' }), routes.views.contact);
   app.get('/:country?', middleware.processCountryLanguage({ path: '' }), routes.views.index);
 
   // NOTE: To protect a route so that only admins can see it, use the requireUser middleware:

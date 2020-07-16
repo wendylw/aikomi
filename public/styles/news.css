@@ -34,7 +34,8 @@ tr > td:first-child {
   border-radius: 12px; }
 
 .news__card p {
-  font-size: 12px; }
+  font-size: 12px;
+  word-break: break-all; }
 
 .news__time {
   padding: 3px 36px;

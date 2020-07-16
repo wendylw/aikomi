@@ -34,6 +34,7 @@ exports = module.exports = function (req, res) {
 
       next(err);
     });
+
   });
 
   // Render the view
