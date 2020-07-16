@@ -53,7 +53,7 @@ keystone.set('routes', require('./routes'));
 
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
-  sciences: 'sciences',
+  sciences: ['sciences', 'science-preferences'],
   homepage: ['home-pages', 'platform-advantages'],
   news: ['news', 'recent-news-lists', 'news-types', 'news-history-lists'],
   users: 'users',

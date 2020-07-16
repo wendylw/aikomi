@@ -109,6 +109,13 @@ Science.add({
   conceptDescription: {
     type: Types.Textarea
   },
+  sciencePreference: {
+    type: Types.Relationship,
+    ref: 'SciencePreference',
+    many: true,
+    filters: { country: ':country' },
+    createInline: true,
+  }
 });
 
 Science.schema.pre('save', function (next) {
@@ -116,6 +123,8 @@ Science.schema.pre('save', function (next) {
   this.slug = slug(`${this._id}-(${this.country})`);
   next();
 });
+
+Science.relationship({ path: 'sciencePreference', ref: 'SciencePreference', refPath: 'group' });
 
 Science.defaultColumns = 'label, title';
 

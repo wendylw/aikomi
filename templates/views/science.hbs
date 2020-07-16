@@ -148,8 +148,15 @@
   <div data-aos="fade-up">
     <section class="section">
       <h3 class="text-center text-size-big text-weight-bold">Reference</h3>
-      <div class="container-sm">
-        <div class="science-reference"></div>
+      <div class="science-reference__container container-sm">
+        <ul class="science-reference__list">
+          {{#each science.sciencePreference}}
+          <li>
+            <span>{{this.description}}</span>
+            <a class="science-reference__link" href="{{this.linkUrl}}">{{this.linkText}}</a>
+          </li>
+          {{/each}}
+        </ul>
       </div>
     </section>
   </div>

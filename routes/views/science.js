@@ -17,7 +17,10 @@ exports = module.exports = function (req, res) {
   locals.section = 'science';
 
   view.on('init', function (next) {
-    const q = keystone.list('Science').model.find({});
+    const q = keystone.list('Science').model.find({}).populate({
+      path: 'sciencePreference',
+      populate: ['sciencePreference'],
+    });
 
     q.exec(function (err, result) {
       locals.science = result.find(item => item.country === (country || COUNTRIES.EN).toUpperCase());
