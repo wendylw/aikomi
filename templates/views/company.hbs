@@ -19,6 +19,8 @@
     $('.company-team-image__item-tag.second').on('mouseout', function () {
       $('.science-advisors .company-team__member').removeClass('show');
     });
+
+    $('.company-team__member').eq(0).removeClass('hide');
   });
 </script>
 {{/contentFor}}
@@ -31,19 +33,23 @@
         <div class="width-1-2">
           <h2 class="company-section__title text-size-bigger text-theme-color text-weight-bold">OUR TEAM</h2>
         </div>
-        <div class="company-team__member width-1-2 flex flex-top">
-          <div class="company-team__avatar flex__shrink-fixed">
-            <img src="/images/company-avatar-1.png" alt="">
-          </div>
-          <div class="company-team__content">
-            <h5 class="text-theme-color">Co-founder & COO</h5>
-            <p class="company-team__name text-weight-bold">​Junichi Kato</p>
-            <i class="company-team__divider divider__horizontal-block"></i>
-            <div>
-              <p class="text-line-height text-weight-light">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+
+        {{#each company.companyTeamMembers}}
+          <div class="company-team__member width-1-2 flex flex-top hide">
+            <div class="company-team__avatar flex__shrink-fixed">
+              <img src="/uploads/company/{{{this.image.filename}}}" alt="">
+            </div>
+            <div class="company-team__content">
+              <h5 class="text-theme-color">{{this.title}}</h5>
+              <p class="company-team__name text-weight-bold">{{this.name}}</p>
+              <i class="company-team__divider divider__horizontal-block"></i>
+              <div>
+                <p class="text-line-height text-weight-light">{{this.description}}</p>
+              </div>
             </div>
           </div>
-        </div>
+        {{/each}}
+
       </div>
     </section>
   </div>

@@ -20,6 +20,9 @@ exports = module.exports = function (req, res) {
     const q = keystone.list('Company').model.find({}).populate({
       path: 'companyPartners',
       populate: ['companyPartners'],
+    }).populate({
+      path: 'companyTeamMembers',
+      populate: ['companyTeamMembers'],
     });
 
     q.exec(function (err, result) {

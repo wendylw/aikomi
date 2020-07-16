@@ -44,6 +44,13 @@ Company.add({
     initial: true,
     required: true
   },
+  companyTeamMembers: {
+    type: Types.Relationship,
+    ref: 'CompanyTeamMembers',
+    many: true,
+    filters: { country: ':country' },
+    createInline: true,
+  },
   cultureReasonTitle: {
     type: String,
   },
@@ -82,6 +89,7 @@ Company.schema.pre('save', function (next) {
 });
 
 Company.relationship({ path: 'companyPartners', ref: 'CompanyPartners', refPath: 'group' });
+Company.relationship({ path: 'companyTeamMembers', ref: 'CompanyTeamMembers', refPath: 'group' });
 
 Company.defaultColumns = 'label, title';
 

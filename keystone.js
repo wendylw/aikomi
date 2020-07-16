@@ -58,7 +58,7 @@ keystone.set('nav', {
   news: ['news', 'recent-news-lists', 'news-types', 'news-history-lists'],
   users: 'users',
   families: ['families', 'family-name-lists'],
-  companies: ['companies', 'company-partners'],
+  companies: ['companies', 'company-partners', 'company-team-members'],
   contact: 'contacts'
 });
 
