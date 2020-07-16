@@ -26,6 +26,30 @@ exports.initLocals = function (req, res, next) {
   next();
 };
 
+/**
+	Set Language for page
+ */
+exports.setLocale = function (req, res, next) {
+  var locale = 'en';
+
+  if (req.acceptsLanguages()) {
+		/*
+		* Get the browser's first preference language, this function is provided by the expression
+		*/
+    locale = req.acceptsLanguages()[0] || locale;
+  }
+
+  // Update the language preference in the cookie if the language is different from the language preference.
+  if (req.signedCookies.locale !== locale) {
+    res.cookie('locale', locale);
+  }
+
+  // Set the language used by i18n for this request
+  req.setLocale(locale);
+
+  next();
+};
+
 
 /**
 	Fetches and clears the flashMessages before a view is rendered

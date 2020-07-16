@@ -5,6 +5,7 @@ require('dotenv').config();
 // Require keystone
 var keystone = require('keystone');
 var handlebars = require('express-handlebars');
+var i18n = require("i18n");
 
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
@@ -62,8 +63,17 @@ keystone.set('nav', {
   contact: 'contacts'
 });
 
+
+// Configure i18n
+i18n.configure({
+  objectNotation: true,
+  locales: ['en', 'zh', 'th'],
+  directory: __dirname + '/locales',
+  extension: '.json',
+  defaultLocale: 'en',
+  cookie: 'language'
+});
+
+
 // Start Keystone to connect to your database and initialise the web server
-
-
-
 keystone.start();

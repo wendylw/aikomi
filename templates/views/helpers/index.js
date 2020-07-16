@@ -1,4 +1,5 @@
 var moment = require('moment');
+var i18n = require('i18n');
 var _ = require('lodash');
 var hbs = require('handlebars');
 var keystone = require('keystone');
@@ -338,6 +339,15 @@ module.exports = function () {
       block = blocks[name] || (blocks[name] = []);
 
     block.push(options.fn(this));
+  };
+
+  // register hbs helpers in res.locals' context which provides this.locale
+  _helpers.__ = function () {
+    return i18n.__.apply(this, arguments);
+  };
+
+  _helpers.__n = function () {
+    return i18n.__n.apply(this, arguments);
   };
 
   return _helpers;
