@@ -18,12 +18,18 @@ module.exports = {
     }
   },
 
-  getOtherLanguageLink(url, country) {
-    if (country.toUpperCase() === 'EN') {
-      return (url.replace('/jp', '') + '/jp');
-    } else {
-      return url.replace('/jp', '');
+  getOtherLanguageLink(url, country, isSwitch) {
+    var urlList = url ? url.split('/').filter(path => Boolean(path)) : [];
+
+    if ((country.toUpperCase() === 'EN' && !url.includes('jp') && isSwitch) || (country.toUpperCase() === 'JP' && !url.includes('jp') && !isSwitch)) {
+      urlList.push('jp');
+    } else if ((country.toUpperCase() === 'JP' && isSwitch) || (country.toUpperCase() === 'EN' && !isSwitch)) {
+      urlList = urlList.filter(u => u !== 'jp');
     }
+
+    console.log(`/${urlList.join('/')}`);
+
+    return `/${urlList.join('/')}`;
   },
 
   __e: function () {

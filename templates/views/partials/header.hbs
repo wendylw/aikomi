@@ -12,27 +12,27 @@
           <img class="nav__close" src="/images/icon-close.svg" alt="">
         </li>
         <li class="nav__item {{#if (getNavActive section 'home')}}active{{/if}}">
-          <a class="nav__link" href="./">Home</a>
+          <a class="nav__link" href="{{getOtherLanguageLink '/' country false}}">Home</a>
         </li>
         <li class="nav__item {{#if (getNavActive section 'science')}}active{{/if}}">
-          <a class="nav__link" href="./science">Science&Tech</a>
+          <a class="nav__link" href="{{getOtherLanguageLink '/science' country false}}">Science&Tech</a>
         </li>
         <li class="nav__item {{#if (getNavActive section 'company')}}active{{/if}}">
-          <a class="nav__link" href="./company">Company Info</a>
+          <a class="nav__link" href="{{getOtherLanguageLink '/company' country false}}">Company Info</a>
         </li>
         <li class="nav__item {{#if (getNavActive section 'news')}}active{{/if}}">
-          <a class="nav__link" href="./news">News</a>
+          <a class="nav__link" href="{{getOtherLanguageLink '/news' country false}}">News</a>
         </li>
         <li class="nav__item {{#if (getNavActive section 'contact')}}active{{/if}}">
-          <a class="nav__link" href="./contact">Contact Us</a>
+          <a class="nav__link" href="{{getOtherLanguageLink '/contact' country false}}">Contact Us</a>
         </li>
         <li class="nav__item {{#if (getNavActive section 'family')}}active{{/if}}">
-          <a class="nav__link" href="./family">Aikomi Family</a>
+          <a class="nav__link" href="{{getOtherLanguageLink '/family' country false}}">Aikomi Family</a>
         </li>
       </ul>
 
       <div class="nav__language">
-        <a class="nav__language-link" href="{{getOtherLanguageLink url country}}">{{getLanguageItem country}}</a>
+        <a class="nav__language-link" href="{{getOtherLanguageLink url country true}}">{{getLanguageItem country}}</a>
       </div>
     </div>
   </div>
