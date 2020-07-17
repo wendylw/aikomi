@@ -27,8 +27,6 @@ module.exports = {
       urlList = urlList.filter(u => u !== 'jp');
     }
 
-    console.log(`/${urlList.join('/')}`);
-
     return `/${urlList.join('/')}`;
   },
 
