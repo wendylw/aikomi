@@ -120,7 +120,7 @@ Family.add({
     many: true,
     filters: { country: ':country' },
     createInline: true,
-  }
+  },
 });
 
 Family.schema.pre('save', function (next) {

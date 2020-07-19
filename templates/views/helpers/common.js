@@ -30,6 +30,18 @@ module.exports = {
     return `/${urlList.join('/')}`;
   },
 
+  getFamilyListClassName(index) {
+    const classList = ['first', 'second', 'third', 'fourth', 'fifth'];
+
+    return classList[index];
+  },
+
+  getCricleAnimation(index) {
+    const imageList = ['family-brain-1.gif', 'family-brain-1.gif', 'family-brain-1.gif', 'family-brain-3.gif', 'family-brain-2.gif'];
+
+    return imageList[index];
+  }
+
   __e: function () {
     var args = Array.prototype.slice.call(arguments);
     var options = args.pop();

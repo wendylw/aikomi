@@ -165,42 +165,14 @@
           <img src="/images/family-section-name.jpg" alt="">
           <ul>
             {{#each family.familyNameList}}
-            <li class="family-name__item first">
-              <img src="/images/family-brain-1.gif" alt="">
-              <div class="family-name__content first">
+            <li class="family-name__item {{getFamilyListClassName @index}}">
+              <img src="{{getCricleAnimation @index}}" alt="">
+              <div class="family-name__content {{getFamilyListClassName @index}}">
                 <h5 class="family-name__title text-theme-color">{{this.title}}</h5>
                 <p class="family-name__content-paragraph">{{this.description}}</p>
               </div>
             </li>
             {{/each}}
-            <li class="family-name__item second">
-              <img src="/images/family-brain-1.gif" alt="">
-              <div class="family-name__content second">
-                <h5 class="family-name__title text-theme-color">Lorem ipsum dolor</h5>
-                <p class="family-name__content-paragraph">consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna……</p>
-              </div>
-            </li>
-            <li class="family-name__item third">
-              <img src="/images/family-brain-1.gif" alt="">
-              <div class="family-name__content third">
-                <h5 class="family-name__title text-theme-color">Lorem ipsum dolor</h5>
-                <p class="family-name__content-paragraph">consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna……</p>
-              </div>
-            </li>
-            <li class="family-name__item fourth">
-              <img src="/images/family-brain-3.gif" alt="">
-              <div class="family-name__content fourth">
-                <h5 class="family-name__title text-theme-color">Lorem ipsum dolor</h5>
-                <p class="family-name__content-paragraph">consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna……</p>
-              </div>
-            </li>
-            <li class="family-name__item fifth">
-              <img src="/images/family-brain-2.gif" alt="">
-              <div class="family-name__content fifth">
-                <h5 class="family-name__title green text-theme-color">Lorem ipsum dolor</h5>
-                <p class="family-name__content-paragraph">consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna……</p>
-              </div>
-            </li>
           </ul>
         </div>
       </div>
