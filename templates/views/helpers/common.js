@@ -42,6 +42,12 @@ module.exports = {
     return imageList[index];
   },
 
+  getTeamMemberListClassName(index) {
+    const classList = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh'];
+
+    return classList[index];
+  },
+
   __e: function () {
     var args = Array.prototype.slice.call(arguments);
     var options = args.pop();

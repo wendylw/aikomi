@@ -79,7 +79,7 @@ Company.add({
     many: true,
     filters: { country: ':country' },
     createInline: true,
-  }
+  },
 });
 
 Company.schema.pre('save', function (next) {

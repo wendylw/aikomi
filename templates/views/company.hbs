@@ -59,34 +59,12 @@
       <div class="company-team-image container">
         <img class="company-team__image" src="/images/company-banner.jpg" alt="">
         <ul>
-          <li class="company-team-image__item-tag first">
-            <i class="company-team-image__tag">Samik Ghosh</i>
+          {{#each company.companyTeamMembers}}
+          <li class="company-team-image__item-tag {{getTeamMemberListClassName @index}}">
+            <i class="company-team-image__tag">{{this.name}}</i>
             <img class="company-team-image__volume" src="/images/volume_up.svg" alt="">
           </li>
-          <li class="company-team-image__item-tag second">
-            <i class="company-team-image__tag">Samik Ghosh</i>
-            <img class="company-team-image__volume" src="/images/volume_up.svg" alt="">
-          </li>
-          <li class="company-team-image__item-tag third">
-            <i class="company-team-image__tag">Samik Ghosh</i>
-            <img class="company-team-image__volume" src="/images/volume_up.svg" alt="">
-          </li>
-          <li class="company-team-image__item-tag fourth">
-            <i class="company-team-image__tag">Samik Ghosh</i>
-            <img class="company-team-image__volume" src="/images/volume_up.svg" alt="">
-          </li>
-          <li class="company-team-image__item-tag fifth">
-            <i class="company-team-image__tag">Samik Ghosh</i>
-            <img class="company-team-image__volume" src="/images/volume_up.svg" alt="">
-          </li>
-          <li class="company-team-image__item-tag sixth">
-            <i class="company-team-image__tag">Samik Ghosh</i>
-            <img class="company-team-image__volume" src="/images/volume_up.svg" alt="">
-          </li>
-          <li class="company-team-image__item-tag seventh">
-            <i class="company-team-image__tag">Samik Ghosh</i>
-            <img class="company-team-image__volume" src="/images/volume_up.svg" alt="">
-          </li>
+          {{/each}}
         </ul>
       </div>
     </section>
@@ -174,15 +152,14 @@
           <div>
             <h3 class="text-size-big text-weight-bold">HISTORY OF AIKOMI</h3>
             <div>
-              <p class="about-us__paragraph text-line-height text-weight-light">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-              <p class="about-us__paragraph text-line-height text-weight-light">Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>
+              {{{company.aboutUsHistory}}}
             </div>
           </div>
           <i class="about-us__divider divider__horizontal-block"></i>
           <div>
             <h3 class="text-size-big text-weight-bold">CORPORATE DETAILS</h3>
             <div>
-              <p class="about-us__paragraph text-line-height text-weight-light">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.</p>
+              {{{company.aboutUsCorporateDetail}}}
             </div>
           </div>
         </div>
