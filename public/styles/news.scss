@@ -21,7 +21,7 @@ tr > td:first-child {
   opacity: 0.5;
 }
 
-.owl-theme .owl-dots .owl-dot.active span, 
+.owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
   background-color: #FFA88F;
   opacity: 1;
@@ -63,6 +63,7 @@ tr > td:first-child {
   }
 
   &__sign {
+    display: inline-block;
     color: #7EC6D0;
   }
 

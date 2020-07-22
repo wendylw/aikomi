@@ -54,13 +54,13 @@ keystone.set('routes', require('./routes'));
 
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
-  sciences: ['sciences', 'science-preferences'],
   homepage: ['home-pages', 'platform-advantages'],
-  news: ['news', 'recent-news-lists', 'news-types', 'news-history-lists'],
-  users: 'users',
-  families: ['families', 'family-name-lists'],
+  sciences: ['sciences', 'science-preferences'],
   companies: ['companies', 'company-partners', 'company-team-members'],
-  contact: 'contacts'
+  news: ['news', 'recent-news-lists', 'news-types', 'news-history-lists'],
+  contact: 'contacts',
+  families: ['families', 'family-name-lists'],
+  users: 'users',
 });
 
 
@@ -71,7 +71,7 @@ i18n.configure({
   directory: __dirname + '/locales',
   extension: '.json',
   defaultLocale: 'en',
-  cookie: 'language'
+  cookie: 'language',
 });
 
 

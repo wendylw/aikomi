@@ -84,6 +84,18 @@ Contact.add({
   email: { type: Types.Email },
   address: { type: String },
   phone: { type: String },
+  aboutUsLink: {
+    type: Types.Url
+  },
+  servicesLink: {
+    type: Types.Url
+  },
+  faqLink: {
+    type: Types.Url
+  },
+  blogLink: {
+    type: Types.Url
+  },
   facebookLink: {
     type: Types.Url
   },
@@ -92,7 +104,10 @@ Contact.add({
   },
   instagramLink: {
     type: Types.Url
-  }
+  },
+  linkedInLink: {
+    type: Types.Url
+  },
 });
 
 Contact.schema.pre('save', function (next) {

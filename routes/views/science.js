@@ -33,6 +33,20 @@ exports = module.exports = function (req, res) {
     });
   });
 
+  view.on('init', function (next) {
+    const q = keystone.list('Contact').model.find({});
+
+    q.exec(function (err, result) {
+      locals.contact = result.find(item => item.country === (country || COUNTRIES.EN).toUpperCase());
+
+      if (!locals.contact) {
+        locals.contact = result.find(item => item.country === COUNTRIES.EN.toUpperCase());
+      }
+
+      next(err);
+    });
+  });
+
   // Render the view
   view.render('science', {
     helpers: commonHelper

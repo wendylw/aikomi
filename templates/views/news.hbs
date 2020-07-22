@@ -58,13 +58,13 @@
       <div class="container-sm">
         <div class="owl-carousel owl-theme">
           {{#each news.recentNewsList}}
-          <div class="item news__item"> 
+          <div class="item news__item">
             <div class="news__card">
               <time class="news__time text-size-big text-theme-color text-weight-bold">{{formatDate this.publicDate 'LL'}}</time>
               <h4 class="news__title text-weight-bold">{{this.title}}</h4>
               <p class="text-line-height">{{this.description}}</p>
               <div class="news__sign-container text-right">
-                <span class="news__sign">{{__ "Click Here"}}</span>
+                <a href="{{this.linkUrl}}" class="news__sign">{{__ "Click Here"}}</a>
               </div>
             </div>
           </div>

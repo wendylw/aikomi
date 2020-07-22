@@ -114,33 +114,36 @@
               <p class="text-line-height text-weight-light">{{family.becomeFamilyDescription}}</p>
             </div>
             <div class="family-animation__video">
-              <iframe width="100%" height="315" src="https://www.youtube.com/embed/HobxLbPhrMc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              {{{family.becomeFamilyVideo}}}
               <div class="family-animation__video-text-container">
-                <h4 class="text-size-big text-theme-color">動画提供者募集</h4>
-                <p class="family-animation__text">ボタンを押すと動画提供者用サイトへ</p>
+                <h4 class="text-size-big text-theme-color">{{family.becomeFamilyVideoTitle}}</h4>
+                <p class="family-animation__text">{{family.becomeFamilyVideoDescription}}</p>
               </div>
             </div>
           </div>
           <div class="width-1-2">
             <div class="family-animation__item">
-              <img src="/images/family-animation-2.jpg" alt="">
+              <img src="/uploads/family/{{{home.becomeFamilyImageI.filename}}}" alt="">
               <div class="family-animation__text-container">
-                <h4 class="text-size-big text-theme-color">写真提供者募集</h4>
-                <p class="family-animation__text">ボタン押すとみんなの非薬物療法サイトへ</p>
+                <h4 class="text-size-big text-theme-color">{{family.becomeFamilyImageITitle}}</h4>
+                <p class="family-animation__text">{{family.becomeFamilyImageIDescription}}</p>
               </div>
             </div>
             <div class="grid">
               <div class="family-animation__item width-1-2">
-                <img src="/images/family-animation-3.jpg" alt="">
+                <img src="/uploads/family/{{{home.becomeFamilyImageII.filename}}}" alt="">
                 <div class="family-animation__text-container">
-                  <h4 class="text-size-big text-theme-color">BLOG</h4>
-                  <p class="family-animation__text">ボタンを押すと BROGサイトへ</p>
+                  <h4 class="text-size-big text-theme-color">{{family.becomeFamilyImageIITitle}}</h4>
+                  <p class="family-animation__text">{{family.becomeFamilyImageIIDescription}}</p>
                 </div>
               </div>
               <div class="family-animation__item width-1-2">
-                <img src="/images/family-animation-4.jpg" alt="">
+                <img src="/uploads/family/{{{home.becomeFamilyImageIII.filename}}}" alt="">
                 <div class="family-animation__text-container">
-                  <p class="text-theme-dark-color">Familyになりたいのでメッセージを送る</p>
+                  {{#if family.becomeFamilyImageIIITitle}}
+                  <h4 class="text-size-big text-theme-color">{{family.becomeFamilyImageIIITitle}}</h4>
+                  {{/if}}
+                  <p class="text-theme-dark-color">{{family.becomeFamilyImageIIIDescription}}</p>
                 </div>
               </div>
             </div>

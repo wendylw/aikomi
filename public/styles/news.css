@@ -49,6 +49,7 @@ tr > td:first-child {
   margin-top: 20px; }
 
 .news__sign {
+  display: inline-block;
   color: #7EC6D0; }
 
 .news__dot-list {

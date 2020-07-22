@@ -20,7 +20,7 @@ SciencePreference.add({
     type: String
   },
   linkUrl: {
-    type: String,
+    type: Types.Url
   },
   country: {
     type: Types.Select,

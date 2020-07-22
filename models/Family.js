@@ -65,6 +65,9 @@ Family.add({
   becomeFamilyVideoTitle: {
     type: String
   },
+  becomeFamilyVideoDescription: {
+    type: String
+  },
   becomeFamilyVideo: {
     type: String,
     note: 'Use &lt;iframe&gt;'

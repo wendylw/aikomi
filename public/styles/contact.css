@@ -34,11 +34,6 @@
 .contact__image {
   height: 16px; }
 
-.contact-newsletter {
-  margin-bottom: 150px; }
-  .contact-newsletter__description {
-    margin: 30px auto; }
-
 .contact__form {
   margin: auto;
   max-width: 800px;
@@ -54,4 +49,10 @@
   background-color: #F7F7F7; }
 
 .contact__button {
-  height: 45px; }
+  padding: 5px 15px;
+  height: 49px; }
+
+.contact-newsletter {
+  margin-bottom: 150px; }
+  .contact-newsletter__description {
+    margin: 30px auto; }

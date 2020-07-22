@@ -20,6 +20,9 @@ RecentNewsList.add({
   description: {
     type: Types.Textarea
   },
+  linkUrl: {
+    type: Types.Url
+  },
   country: {
     type: Types.Select,
     options: Object.keys(constants.COUNTRIES),
