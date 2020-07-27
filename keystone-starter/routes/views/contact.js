@@ -1,5 +1,5 @@
 var keystone = require('keystone');
-var Enquiry = keystone.list('Enquiry');
+var Subscribes = keystone.list('Subscribes');
 
 exports = module.exports = function (req, res) {
 
@@ -8,26 +8,26 @@ exports = module.exports = function (req, res) {
 
 	// Set locals
 	locals.section = 'contact';
-	locals.enquiryTypes = Enquiry.fields.enquiryType.ops;
+	// locals.enquiryTypes = Enquiry.fields.enquiryType.ops;
 	locals.formData = req.body || {};
 	locals.validationErrors = {};
-	locals.enquirySubmitted = false;
+	locals.subscribeSubmitted = false;
 
 	// On POST requests, add the Enquiry item to the database
 	view.on('post', { action: 'contact' }, function (next) {
 
-		var newEnquiry = new Enquiry.model();
-		var updater = newEnquiry.getUpdateHandler(req);
+		var newSubscribes = new Subscribes.model();
+		var updater = newSubscribes.getUpdateHandler(req);
 
 		updater.process(req.body, {
 			flashErrors: true,
-			fields: 'name, email, phone, enquiryType, message',
-			errorMessage: 'There was a problem submitting your enquiry:',
+			fields: 'email',
+			errorMessage: 'There was a problem submitting your subscribe:',
 		}, function (err) {
 			if (err) {
 				locals.validationErrors = err.errors;
 			} else {
-				locals.enquirySubmitted = true;
+				locals.subscribeSubmitted = true;
 			}
 			next();
 		});

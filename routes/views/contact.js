@@ -1,6 +1,7 @@
 var keystone = require('keystone');
 var commonHelper = require('../../templates/views/helpers/common');
 var constants = require('../../lib/constants');
+var Subscribes = keystone.list('Subscribes');
 
 const {
   COUNTRIES
@@ -14,6 +15,9 @@ exports = module.exports = function (req, res) {
 
   // Set locals
   locals.section = 'contact';
+  locals.formData = req.body || {};
+  locals.validationErrors = {};
+  locals.subscribeSubmitted = false;
 
   view.on('init', function (next) {
     const q = keystone.list('Contact').model.find({});
@@ -28,30 +32,25 @@ exports = module.exports = function (req, res) {
       next(err);
     });
   });
-  // locals.enquiryTypes = Enquiry.fields.enquiryType.ops;
-  // locals.formData = req.body || {};
-  // locals.validationErrors = {};
-  // locals.enquirySubmitted = false;
 
-  // On POST requests, add the Enquiry item to the database
-  // view.on('post', { action: 'contact' }, function (next) {
+  //On POST requests, add the Subscribes item to the database
+  view.on('post', { action: 'contact' }, function (next) {
+    var newSubscribes = new Subscribes.model();
+    var updater = newSubscribes.getUpdateHandler(req);
 
-  //   var newEnquiry = new Enquiry.model();
-  //   var updater = newEnquiry.getUpdateHandler(req);
-
-  //   updater.process(req.body, {
-  //     flashErrors: true,
-  //     fields: 'name, email, phone, enquiryType, message',
-  //     errorMessage: 'There was a problem submitting your enquiry:',
-  //   }, function (err) {
-  //     if (err) {
-  //       locals.validationErrors = err.errors;
-  //     } else {
-  //       locals.enquirySubmitted = true;
-  //     }
-  //     next();
-  //   });
-  // });
+    updater.process(req.body, {
+      flashErrors: true,
+      fields: 'email',
+      errorMessage: 'There was a problem submitting your subscribe:',
+    }, function (err) {
+      if (err) {
+        locals.validationErrors = err.errors;
+      } else {
+        locals.subscribeSubmitted = true;
+      }
+      next();
+    });
+  });
 
   view.render('contact', {
     helpers: commonHelper
