@@ -25,6 +25,7 @@ CompanyTeamMembers.add({
   description: {
     type: Types.Textarea
   },
+  isScientificAdvisors: {type: Types.Boolean},
   country: {
     type: Types.Select,
     options: Object.keys(constants.COUNTRIES),

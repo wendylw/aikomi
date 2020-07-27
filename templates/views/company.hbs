@@ -4,20 +4,12 @@
 {{#contentFor "PAGE_LEVEL_SCRIPTS"}}
 <script>
   $(document).ready(function () {
-    $('.company-team-image__item-tag.first').on('mouseenter', function () {
+    $('.company-team-image__item-tag').on('mouseenter', function () {
       $('.our-team .company-team__member').addClass('show');
     });
 
-    $('.company-team-image__item-tag.first').on('mouseout', function () {
+    $('.company-team-image__item-tag').on('mouseout', function () {
       $('.our-team .company-team__member').removeClass('show');
-    });
-
-    $('.company-team-image__item-tag.second').on('mouseenter', function () {
-      $('.science-advisors .company-team__member').addClass('show');
-    });
-
-    $('.company-team-image__item-tag.second').on('mouseout', function () {
-      $('.science-advisors .company-team__member').removeClass('show');
     });
 
     $('.company-team__member').eq(0).removeClass('hide');
@@ -35,7 +27,8 @@
         </div>
 
         {{#each company.companyTeamMembers}}
-          <div class="company-team__member width-1-2 flex flex-top hide">
+          {{#unless this.isScientificAdvisors}}
+          <div id="companyTeamMembersInfo{{@index}}" class="company-team__member width-1-2 flex flex-top hide">
             <div class="company-team__avatar flex__shrink-fixed">
               <img src="/uploads/company/{{{this.image.filename}}}" alt="">
             </div>
@@ -48,6 +41,7 @@
               </div>
             </div>
           </div>
+          {{/unless}}
         {{/each}}
 
       </div>
@@ -60,7 +54,7 @@
         <img class="company-team__image" src="/images/company-banner.jpg" alt="">
         <ul>
           {{#each company.companyTeamMembers}}
-          <li class="company-team-image__item-tag {{getTeamMemberListClassName @index}}">
+          <li id="companyTeamMembersCell{{@index}}" class="company-team-image__item-tag {{getTeamMemberListClassName @index}}">
             <i class="company-team-image__tag">{{this.name}}</i>
             <img class="company-team-image__volume" src="/images/volume_up.svg" alt="">
           </li>
@@ -76,7 +70,25 @@
         <div class="width-1-2">
           <h2 class="company-section__title text-size-bigger text-theme-color text-weight-bold">OUR<br />SCIENTIFIC<br />ADVISORS</h2>
         </div>
-        <div class="company-team__member width-1-2 flex flex-top">
+        {{#each company.companyTeamMembers}}
+          {{#if this.isScientificAdvisors}}
+          <div id="companyTeamMembersInfo{{@index}}" class="company-team__member width-1-2 flex flex-top hide">
+            <div class="company-team__avatar flex__shrink-fixed">
+              <img src="/uploads/company/{{{this.image.filename}}}" alt="">
+            </div>
+            <div class="company-team__content">
+              <h5 class="text-theme-color">{{this.title}}</h5>
+              <p class="company-team__name text-weight-bold">{{this.name}}</p>
+              <i class="company-team__divider divider__horizontal-block"></i>
+              <div>
+                <p class="text-line-height text-weight-light">{{this.description}}</p>
+              </div>
+            </div>
+          </div>
+          {{/if}}
+        {{/each}}
+
+        {{!-- <div class="company-team__member width-1-2 flex flex-top">
           <div class="company-team__avatar flex__shrink-fixed">
             <img src="/images/company-avatar-2.png" alt="">
           </div>
@@ -88,7 +100,8 @@
               <p class="text-line-height text-weight-light">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
             </div>
           </div>
-        </div>
+        </div> --}}
+
       </div>
     </section>
   </div>
