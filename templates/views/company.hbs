@@ -5,11 +5,17 @@
 <script>
   $(document).ready(function () {
     $('.company-team-image__item-tag').on('mouseenter', function () {
-      $('.our-team .company-team__member').addClass('show');
+      var tagId = $(this).attr('id');
+      var index = tagId.replace('companyTeamMembersCell', '');
+
+      $('#companyTeamMembersInfo' + index).addClass('show');
     });
 
     $('.company-team-image__item-tag').on('mouseout', function () {
-      $('.our-team .company-team__member').removeClass('show');
+      var tagId = $(this).attr('id');
+      var index = tagId.replace('companyTeamMembersCell', '');
+
+      $('#companyTeamMembersInfo' + index).removeClass('show');
     });
 
     $('.company-team__member').eq(0).removeClass('hide');
@@ -72,7 +78,7 @@
         </div>
         {{#each company.companyTeamMembers}}
           {{#if this.isScientificAdvisors}}
-          <div id="companyTeamMembersInfo{{@index}}" class="company-team__member width-1-2 flex flex-top hide">
+          <div id="companyTeamMembersInfo{{@index}}" class="company-team__member width-1-2 flex flex-top">
             <div class="company-team__avatar flex__shrink-fixed">
               <img src="/uploads/company/{{{this.image.filename}}}" alt="">
             </div>
