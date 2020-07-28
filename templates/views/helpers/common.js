@@ -36,7 +36,7 @@ module.exports = {
     return classList[index];
   },
 
-  getCricleAnimation(index) {
+  getCircleAnimation(index) {
     const imageList = ['family-brain-1.gif', 'family-brain-1.gif', 'family-brain-1.gif', 'family-brain-3.gif', 'family-brain-2.gif'];
 
     return imageList[index];
