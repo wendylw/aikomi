@@ -8,6 +8,8 @@
       var tagId = $(this).attr('id');
       var index = tagId.replace('companyTeamMembersCell', '');
 
+      $('.company-team__member').removeClass('show');
+      $('.company-team__member').addClass('hide');
       $('#companyTeamMembersInfo' + index).addClass('show');
     });
 
