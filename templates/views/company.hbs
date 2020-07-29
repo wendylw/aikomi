@@ -8,6 +8,15 @@
       var tagId = $(this).attr('id');
       var index = tagId.replace('companyTeamMembersCell', '');
 
+      if ($('#companyTeamMembersInfo' + index).parents('.our-team').length > 0) {
+        $('.our-team .company-team__member').removeClass('show');
+        $('.our-team .company-team__member').addClass('hide');
+      } else if ($('#companyTeamMembersInfo' + index).parents('.science-advisors').length > 0) {
+        $('.science-advisors .company-team__member').removeClass('show');
+        $('.science-advisors .company-team__member').addClass('hide');
+      }
+
+      $('#companyTeamMembersInfo' + index).removeClass('hide');
       $('#companyTeamMembersInfo' + index).addClass('show');
     });
 
@@ -18,7 +27,8 @@
       $('#companyTeamMembersInfo' + index).removeClass('show');
     });
 
-    $('.company-team__member').eq(0).removeClass('hide');
+    $('.science-advisors .company-team__member').eq(0).removeClass('hide');
+    $('.our-team .company-team__member').eq(0).removeClass('hide');
   });
 </script>
 {{/contentFor}}
