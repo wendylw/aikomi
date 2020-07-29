@@ -126,7 +126,9 @@
               <img src="/uploads/family/{{family.becomeFamilyImageI.filename}}" alt="">
               <div class="family-animation__text-container">
                 <h4 class="text-size-big text-theme-color">{{family.becomeFamilyImageITitle}}</h4>
-                <p class="family-animation__text">{{family.becomeFamilyImageIDescription}}</p>
+                <a href="{{family.becomeFamilyImageILink}}">
+                  <p class="family-animation__text">{{family.becomeFamilyImageIDescription}}</p>
+                </a>
               </div>
             </div>
             <div class="grid">
@@ -134,7 +136,9 @@
                 <img src="/uploads/family/{{family.becomeFamilyImageII.filename}}" alt="">
                 <div class="family-animation__text-container">
                   <h4 class="text-size-big text-theme-color">{{family.becomeFamilyImageIITitle}}</h4>
-                  <p class="family-animation__text">{{family.becomeFamilyImageIIDescription}}</p>
+                  <a href="{{family.becomeFamilyImageIILink}}">
+                    <p class="family-animation__text">{{family.becomeFamilyImageIIDescription}}</p>
+                  </a>
                 </div>
               </div>
               <div class="family-animation__item width-1-2">
@@ -143,7 +147,9 @@
                   {{#if family.becomeFamilyImageIIITitle}}
                   <h4 class="text-size-big text-theme-color">{{family.becomeFamilyImageIIITitle}}</h4>
                   {{/if}}
-                  <p class="text-theme-dark-color">{{family.becomeFamilyImageIIIDescription}}</p>
+                  <a href="{{family.becomeFamilyImageIIILink}}">
+                    <p class="text-theme-dark-color">{{family.becomeFamilyImageIIIDescription}}</p>
+                  </a>
                 </div>
               </div>
             </div>

@@ -83,6 +83,9 @@ Family.add({
   becomeFamilyImageIDescription: {
     type: Types.Textarea
   },
+  becomeFamilyImageILink: {
+    type: Types.Url
+  },
   becomeFamilyImageII: {
     type: Types.File,
     thumb: true,
@@ -94,6 +97,9 @@ Family.add({
   becomeFamilyImageIIDescription: {
     type: Types.Textarea
   },
+  becomeFamilyImageIILink: {
+    type: Types.Url
+  },
   becomeFamilyImageIII: {
     type: Types.File,
     thumb: true,
@@ -104,6 +110,9 @@ Family.add({
   },
   becomeFamilyImageIIIDescription: {
     type: Types.Textarea
+  },
+  becomeFamilyImageIIILink: {
+    type: Types.Url
   },
   familyNameTitle: {
     type: String
